@@ -1,0 +1,77 @@
+<div class="content">
+    <div class="container">
+        <aside class="filter-section">
+            <h2>Filter & Sort</h2>
+            <select id="filterBy" onchange="showFilterOptions()">
+                <option value="">Select filter...</option>
+                <option value="eventName">Event Name</option>
+                <option value="dateTime">Date</option>
+                <option value="performer">Performer</option>
+                <option value="status">Status</option>
+            </select>
+
+            <div id="eventNameOptions" class="filter-options">
+                <input type="text" id="eventNameFilter" placeholder="Filter event name..." />
+            </div>
+
+            <div id="dateTimeOptions" class="filter-options">
+                <div class="date">
+                    <div>
+                        <label for="startDate">From: </label>
+                        <input type="date" id="startDate" />
+                    </div>
+                    <div>
+                        <label for="endDate">To: </label>
+                        <input type="date" id="endDate" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="performerOptions" class="filter-options">
+                <input type="text" id="performerFilter" placeholder="Filter performer name..." />
+            </div>
+
+            <div id="statusOptions" class="filter-options">
+                <select id="statusFilter">
+                    <option value="">All</option>
+                    <option value="Upcoming">Upcoming</option>
+                    <option value="Ongoing">Ongoing</option>
+                    <option value="Finished">Finished</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="eventTypeFilter" onchange="applyFilter()">
+                    <option value="">Select event type...</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Friends Party">Friends Party</option>
+                    <option value="Family">Family</option>
+                    <option value="Baby Naming Ceremony">
+                        Baby Naming Ceremony
+                    </option>
+                    <option value="House Warming Ceremony">
+                        House Warming Ceremony
+                    </option>
+                    <option value="Wedding Ceremony">Wedding Ceremony</option>
+                    <option value="Engagement Ceremony">Engagement Ceremony</option>
+                    <option value="Promotion Party">Promotion Party</option>
+                    <option value="Award Ceremony">Award Ceremony</option>
+                    <option value="Company Opening">Company Opening</option>
+                    <option value="Company Anniversary">Company Anniversary</option>
+                    <option value="Product Launching">Product Launching</option>
+                    <option value="Brand Launching">Brand Launching</option>
+                </select>
+            </div>
+
+            <button id="applyFilterButton" class="apply" onclick="applyFilter()">
+                Apply Filter
+            </button>
+        </aside>
+        <main class="content-section">
+            <input type="text" class="search-bar" placeholder="Search events..." id="search-input" />
+            <div class="event-grid" id="event-grid">
+                <!-- Event cards will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+</div>

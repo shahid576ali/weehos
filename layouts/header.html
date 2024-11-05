@@ -1,0 +1,73 @@
+<header>
+    <div class="navigation">
+        <nav class="navbar">
+          <a href="index.html"
+            ><a href="index.html"
+              ><img src="images/weehologo.png" class="brand-logo" alt="" /></a
+          ></a>
+          <div class="input">
+            <ion-icon name="search"></ion-icon>
+            <input
+              className="search"
+              placeholder="Search for Events, Plays, and Activities"
+            />
+          </div>
+          <div class="right-container">
+            <button
+              class="signin"
+              onclick="document.getElementById('id01').style.display='block'"
+            >
+              Book Your Event
+            </button>
+            <button
+              class="signin"
+              onclick="document.getElementById('id01').style.display='block'"
+            >
+              Register as Artist
+            </button>
+            <button class="open-menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <span class="close-btn">&times;</span>
+            <button
+              class="signin"
+              onclick="document.getElementById('id01').style.display='block'"
+            >
+              Book Your Event
+            </button>
+            <button
+              class="signin"
+              onclick="document.getElementById('id01').style.display='block'"
+            >
+              Register as Artist
+            </button>
+            <ul class="navitem">
+              <li><a onclick="loadPage('home'); return false;">Home</a></li>
+              <li>
+                <a onclick="loadPage('about')">Events<span>NEW</span></a>
+              </li>
+              <li><a onclick="loadPage('about')">About</a></li>
+              <li><a onclick="loadPage('contactus')">Contact</a></li>
+              <li><a onclick="loadPage('program')">Programs</a></li>
+              <li><a onclick="loadPage('artist')">Artists</a></li>
+              <li><a onclick="loadPage('blog')">Blogs</a></li>
+              <li><a onclick="loadPage('coverimage')">Cover Image</a></li>
+            </ul>
+            <ul class="navitem1">
+              <li><a onclick="loadPage('createyourevent')">Create Your Event</a></li>
+            </ul>
+            <ul class="navitem1">
+              <li><a href="upcomingEvents.html">Upcoming Events</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script src="../script/header.js"></script>
+
+</header>

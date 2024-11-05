@@ -1,0 +1,156 @@
+.content .loginbody .container {
+    margin: 40px 0;
+}
+
+.content .loginbody {
+/* display: flex; */
+justify-content: center;
+align-items: center;
+height: 80%;
+Padding-left: 90px;
+padding-top: 20px;
+font-family: 'Roboto', sans-serif;
+background-color: #f4f4f9;
+}
+
+.content .container {
+display: flex;
+padding: auto;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+max-width: 1000px;
+width: 90%;
+}
+
+.content .form-container {
+max-width: 450px;
+flex: 1;
+}
+
+.container {
+background: linear-gradient(to right, #ff6400, #ff9600);
+}
+
+.content .form-container h1 {
+margin-bottom: 20px;
+font-size: 28px;
+color: white;
+}
+
+.content .form-container p {
+margin-bottom: 30px;
+color: white;
+}
+
+.content .form-container label {
+display: block;
+margin: 10px 0 5px;
+color: white;
+font-weight: bold;
+}
+
+.content .form-container input,
+select {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+background-color: #f9f9f9;
+}
+
+.content .form-container button {
+width: 100%;
+padding: 12px;
+background-color: #ad2020;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 20px;
+transition: background-color 0.3s ease;
+}
+
+/* .content .form-container button:hover {
+background-color: #ff6400;
+} */
+
+.content .form-container .social-signup {
+display: flex;
+flex-direction: column;
+margin-top: 30px;
+}
+
+.content .form-container .social-signup button {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 12px;
+margin-top: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+background-color: white;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+.content .form-container .social-signup button:hover {
+background-color: #f4f4f9;
+}
+
+.content .form-container .social-signup button img {
+width: 20px;
+margin-right: 10px;
+}
+
+.content .image-container {
+flex: 1;
+background: url('../coo.jpeg.jpg') center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 8px;
+}
+
+.content .image-container img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+.footer {
+background-color: #333;
+padding: 20px;
+text-align: center;
+}
+
+@media (min-width: 1024px) {
+.form-container {
+    padding: 30px;
+}
+}
+
+@media (max-width: 768px) {
+.container {
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.image-container {
+    display: none;
+}
+}
+
+/* img, svg {
+vertical-align: middle;
+width: 290px;
+/* text-align: center; 
+margin-left: 490px;
+margin-bottom: 30px;
+} */

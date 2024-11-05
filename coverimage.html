@@ -1,0 +1,34 @@
+<!-- Content -->
+<div class="content">
+  <section id="add-image">
+    <h2>Add New Image</h2>
+    <form id="image-form">
+      <input type="file" id="image-upload" accept="image/*" required />
+      <input
+        type="text"
+        id="image-alt"
+        placeholder="Image description"
+        required
+      />
+      <div id="cropper-container" style="display: none">
+        <img id="cropper-image" />
+      </div>
+      <button type="button" id="crop-button">Add Image</button>
+    </form>
+  </section>
+  <section id="image-list">
+    <h2>Added Images</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="image-table-body"></tbody>
+    </table>
+  </section>
+  <a href="index.html"><button type="submit">Submit</button></a>
+</div>
+<!-- End content -->

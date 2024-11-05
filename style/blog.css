@@ -1,0 +1,160 @@
+.content .container {
+    overflow: hidden;
+}
+
+.content h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.events-list {
+    width: 100%;
+    padding: 10px 2.1%;
+    overflow: hidden;
+}
+
+.events-list .card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
+}
+
+.events-list .card {
+    transition: transform 0.3s ease;
+}
+
+.events-list .card:hover {
+    transform: translate(5px, 5px) rotate(1deg) scale(1.05);
+}
+
+.events-list h2 {
+    font-weight: 600;
+    padding-left: 30px;
+    color: #A20D0D;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.content .card {
+    flex: 0 0 auto;
+    width: 221px;
+    height: 300px;
+    min-width: 175px;
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
+    border-radius: 10px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translate(5px, 5px) rotate(1deg) scale(1.05);
+}
+
+.content .card h3 {
+    margin-top: 0;
+}
+
+.content .card p {
+    margin: 10px 0;
+}
+
+.content .birthday {
+    background-image: url('https://images.pexels.com/photos/7100327/pexels-photo-7100327.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .friends {
+    background-image: url('https://images.pexels.com/photos/1387037/pexels-photo-1387037.jpeg?auto=compress&cs=tinysrgb&w=600');
+    color: #333;
+}
+
+.content .family {
+    background-image: url('https://images.pexels.com/photos/5638830/pexels-photo-5638830.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .baby-naming {
+    background-image: url('https://images.pexels.com/photos/325867/pexels-photo-325867.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .house-warming {
+    background-image: url('https://media.istockphoto.com/id/1148575768/photo/new-home-ribbon-cutting-ceremony.jpg?b=1&s=612x612&w=0&k=20&c=cFFS6nvXPeeGsqVdHQJt0Q9BbH6CN7ZdYj3gWk3wnBM=');
+}
+
+.content .wedding {
+    background-image: url('https://images.pexels.com/photos/1603884/pexels-photo-1603884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.content .engagement {
+    background-image: url('https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .team_indoor {
+    background-image: url('https://images.pexels.com/photos/6203533/pexels-photo-6203533.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .team_outdoor {
+    background-image: url('https://images.pexels.com/photos/718952/pexels-photo-718952.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .promotion {
+    background-image: url('https://images.pexels.com/photos/8555215/pexels-photo-8555215.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .award_ceremony {
+    background-image: url('https://images.pexels.com/photos/8310448/pexels-photo-8310448.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .company_Opening {
+    background-image: url('https://images.pexels.com/photos/25338043/pexels-photo-25338043/free-photo-of-spiegel-building-in-hamburg.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .company_Anniversary {
+    background-image: url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .Product_Launching {
+    background-image: url('https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.content .Brand_Launching {
+    background-image: url('https://images.pexels.com/photos/25809257/pexels-photo-25809257/free-photo-of-store-with-tablets.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+@media (max-width: 1024px) {
+    .events-list,
+    .container {
+        padding: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .events-list,
+    .container {
+        padding: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 458px) {
+    body {
+        margin-top: 50px;
+    }
+}
