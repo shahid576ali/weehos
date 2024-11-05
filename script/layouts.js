@@ -26,13 +26,14 @@ function loadPage(page) {
       // Load resources based on the current page
       switch (page) {
         case 'home':
-          loadScript('home.js');
-          loadScript('cardslide.js');
+          loadScript('js/home.js');
+          loadScript('js/cardslide.js');
           loadCSS('style/home.css');
           break;
         case 'about':
           loadCSS("style/about.css");
-          loadScript("about.js");
+          loadScript("js/about.js");
+          loadScript("https://unpkg.com/scrollreveal");
           break;
         case 'contactus':
           loadCSS('style/contactus.css');
@@ -41,7 +42,7 @@ function loadPage(page) {
           loadCSS('style/program.css');
           break;
         case 'artist':
-          loadScript('artist.js');
+          loadScript('js/artist.js');
           loadCSS('style/artist.css');
           break;
         case 'blog':
@@ -49,14 +50,13 @@ function loadPage(page) {
           break;
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
-          loadScript('priview.js');
+          loadScript('js/priview.js');
           loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js', () => {
             document.querySelectorAll("textarea").forEach((textarea) => {
               ClassicEditor.create(textarea).catch((error) => {
                 console.error(error);
               });
             });
-  
             document
               .getElementById("wr_form")
               .addEventListener("submit", (event) => {
@@ -65,11 +65,8 @@ function loadPage(page) {
                     editor.getData();
                 });
               });
-  
           });
-
-          
-          loadScript('texteditor.js');
+          loadScript('js/texteditor.js');
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');

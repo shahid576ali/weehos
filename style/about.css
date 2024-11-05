@@ -94,7 +94,7 @@ body {
 }
 
 .content .header {
-  background-image: url("/images/about/events1.jpg");
+  background-image: url("../images/about/events1.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
