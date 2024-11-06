@@ -74,6 +74,11 @@ function loadPage(page) {
           loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js')
           loadScript('js/coverimage.js')
           break;
+        case 'addperformer':
+          loadCSS('style/addperformer.css');
+          loadScript("https://code.jquery.com/jquery-3.6.0.min.js");
+          loadScript('js/addperformer.js')
+          break;
       }
     })
     .catch(error => console.error("Error loading content:", error));
