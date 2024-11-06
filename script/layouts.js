@@ -40,6 +40,7 @@ function loadPage(page) {
           break;
         case 'program':
           loadCSS('style/program.css');
+          loadScript('js/program.js')
           break;
         case 'artist':
           loadScript('js/artist.js');
@@ -70,6 +71,8 @@ function loadPage(page) {
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');
+          loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js')
+          loadScript('js/coverimage.js')
           break;
       }
     })

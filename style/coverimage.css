@@ -29,8 +29,8 @@ button {
     border-radius: 5px;
 }
 
-button {
-    background-color: #333545;
+#crop-button, #submit-button {
+    background-color: #a20d0d;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -44,8 +44,8 @@ td button {
     margin-right: 10px;
 }
 
-button:hover {
-    background-color: #222539;
+#crop-button:hover, #submit-button:hover {
+    background-color: #ff6400;
     transform: scale(1.02);
 }
 
