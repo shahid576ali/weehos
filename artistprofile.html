@@ -1,0 +1,75 @@
+<div class="content">
+    <div class="container">
+      <div class="profile-header">
+        <div class="profile-details">
+          <h1>User Profile</h1>
+          <p><strong>Name:</strong> Mandeep Singh</p>
+          <p><strong>Email:</strong> mandeep@example.com</p>
+          <p><strong>Location:</strong> New Delhi, India</p>
+          <p><strong>Performance:</strong> Singer</p>
+        </div>
+        <div class="profile-picture">
+          <img src="images/artists/mandeep.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab(0)">
+          Events
+        </button>
+        <button class="tab-button" onclick="showTab(1)">Requests</button>
+      </div>
+
+      <div class="table-controls">
+        <div>
+          <label for="rows-per-page">Show </label>
+          <select id="rows-per-page" onchange="changeRowsPerPage()">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+          <label for="rows-per-page">entries</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search..."
+            onkeyup="filterTable()"
+          />
+        </div>
+      </div>
+
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">
+              Event Name <i class="fas fa-sort sort-icon"></i>
+            </th>
+            <th onclick="sortTable(1)">
+              Type <i class="fas fa-sort sort-icon"></i>
+            </th>
+            <th onclick="sortTable(2)">
+              Date <i class="fas fa-sort sort-icon"></i>
+            </th>
+            <th onclick="sortTable(3)">
+              Venue <i class="fas fa-sort sort-icon"></i>
+            </th>
+            <th onclick="sortTable(4)">
+              Status <i class="fas fa-sort sort-icon"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="pagination">
+        <div id="page-info"></div>
+        <div>
+          <button onclick="changePage(-1)">Prev</button>
+          <span id="page-numbers"></span>
+          <button onclick="changePage(1)">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -79,6 +79,10 @@ function loadPage(page) {
           loadScript("https://code.jquery.com/jquery-3.6.0.min.js");
           loadScript('js/addperformer.js')
           break;
+        case 'artistprofile':
+          loadCSS('style/artistprofile.css');
+          loadScript('js/artistprofile.js');
+          break;
       }
     })
     .catch(error => console.error("Error loading content:", error));
