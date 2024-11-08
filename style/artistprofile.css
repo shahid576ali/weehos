@@ -1,39 +1,65 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .profile-header {
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.profile-header {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
-  }
-  
-  .profile-details {
-    flex: 2;
-    padding-right: 20px;
-  }
-  
-  .profile-details h1,
-  .profile-details strong {
+    justify-content: center;
+    gap: 100px;
+}
+
+.profile-details {
+    line-height: 11px;
+}
+
+.profile-details h1,
+.profile-details strong {
     color: #a20d0d;
-  }
-  
-  .profile-picture {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .profile-picture img {
+}
+
+.follow,
+.voting {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.follow-btn,
+.pic-btn {
+    border-radius: 8px;
+    background: linear-gradient(to right, #ff6400, #ff9600);
+    color: white;
+    padding: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+.pic-btn {
+    text-align: center;
+}
+
+.profile-picture {
+    display: flex;
+}
+
+.profile-picture img {
     border-radius: 50%;
     max-width: 200px;
-  }
-  
-  .tab-buttons {
+}
+
+.tab-buttons {
     margin-bottom: 20px;
-  }
-  
-  .tab-button {
+}
+
+.tab-button {
     padding: 10px 20px;
     cursor: pointer;
     background-color: #f0f0f0;
@@ -41,71 +67,73 @@
     border-radius: 8px;
     margin-right: 10px;
     transition: transform 0.3s ease;
-  }
-  
-  .tab-button.active {
+}
+
+.tab-button.active {
     background: linear-gradient(to right, #ff6400, #ff9600);
     color: white;
-  }
-  
-  .tab-button:hover {
+}
+
+.follow-btn:hover,
+.tab-button:hover,
+.pic-btn:hover {
     transform: translate(1px, 1px) scale(1.05);
-  }
-  
-  .table-controls {
+}
+
+.table-controls {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-  }
-  
-  #data-table {
+}
+
+#data-table {
     width: 100%;
     border-collapse: collapse;
     overflow-x: auto;
-  }
-  
-  thead {
+}
+
+thead {
     background: linear-gradient(to right, #ff6400, #ff9600);
-  }
-  
-  th,
-  td {
+}
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-  }
-  
-  th {
+}
+
+th {
     background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #f9f9f9;
-  }
-  
-  tbody tr:hover {
+}
+
+tbody tr:hover {
     background-color: #f5f5f5;
-  }
-  
-  .sort-icon {
+}
+
+.sort-icon {
     margin-left: 5px;
-  }
-  
-  .pagination {
+}
+
+.pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-  }
-  
-  #page-numbers button {
+}
+
+#page-numbers button {
     margin: 0 2px;
     background-color: white;
     color: black;
     border: 1px solid #ddd;
-  }
-  
-  .pagination button {
+}
+
+.pagination button {
     padding: 5px 10px;
     cursor: pointer;
     background-color: #a20d0d;
@@ -113,55 +141,54 @@
     border: none;
     border-radius: 5px;
     transition: transform 0.3s ease;
-  }
-  
-  .pagination button:disabled {
+}
+
+.pagination button:disabled {
     background-color: #a20d0d;
     color: white;
     opacity: 0.5;
-  }
-  
-  #page-numbers {
+}
+
+#page-numbers {
     display: inline-flex;
     background-color: white;
-  }
-  
-  #page-numbers button:hover {
+}
+
+#page-numbers button:hover {
     color: black;
     background-color: #f5f5f5;
-  }
-  
-  .action-button {
+}
+
+.action-button {
     padding: 5px 10px;
     margin-right: 5px;
     cursor: pointer;
     border-radius: 8px;
-  }
-  
-  .accept,
-  .reject,
-  .postpone {
+}
+
+.accept,
+.reject,
+.postpone {
     color: white;
     border: none;
     transition: transform 0.3s ease;
-  }
-  
-  .accept {
+}
+
+.accept {
     background-color: green;
-  }
-  
-  .reject {
+}
+
+.reject {
     background-color: red;
-  }
-  
-  .postpone {
+}
+
+.postpone {
     background-color: #ff6400;
-  }
-  
-  .accept:hover,
-  .reject:hover,
-  .postpone:hover,
-  .pagination button:hover {
+}
+
+.accept:hover,
+.reject:hover,
+.postpone:hover,
+.pagination button:hover {
     transform: translate(1px, 1px) scale(1.05);
-  }
-  
+}
