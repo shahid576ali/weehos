@@ -192,3 +192,13 @@ tbody tr:hover {
 .pagination button:hover {
     transform: translate(1px, 1px) scale(1.05);
 }
+
+@media (max-width: 480px) {
+    .profile-header {
+        gap: 5px;
+    }
+
+    .tab-buttons {
+        text-align: center;
+    }
+}
