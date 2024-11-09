@@ -1,30 +1,87 @@
 <div class="content">
     <div class="container">
-        <h1>Artist Profile</h1>
-        <div class="profile-header">
+        <div class="cover-img-wrapper">
+            <img class="cover-img" src="images/artists/familygettogether.jpg" alt="Cover Image">
             <div class="profile-picture">
                 <img src="images/artists/mandeep.jpg" alt="Profile Picture" />
             </div>
+        </div>
+        <div class="profile-header">
             <div class="profile-details">
                 <div class="follow">
                     <p>Mandeep Singh</p>
                     <button class="follow-btn" id="follow-btn" title="btn" type="button">Follow</button>
                 </div>
-                <p><strong>@Singer</strong></p>
                 <div class="voting">
                     <p><strong>25</strong> Events</p>
                     <p><strong>1.1k</strong> followers</p>
                 </div>
+                <p><strong>@Singer</strong></p>
+                <p>💕🎶Improve yourself daily🎶💕</p>
                 <p>mandeep@example.com</p>
                 <p>New Delhi, India</p>
                 <p>Golden Globe Award Winner</p>
             </div>
         </div>
 
+        <div class="posts">
+            <div class="post-item">
+                <img src="images/artists/mandeep.jpg" alt="">
+                <div class="post-info">
+                    <div class="flex">
+                        <p>Family Gathering</p>
+                        <p>Date: 12th Nov 2023</p>
+                    </div>
+                    <div class="flex">
+                        <p>Location: New Delhi</p>
+                        <p><i class="fas fa-heart"></i> 320 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="images/artists/mandeep.jpg" alt="">
+                <div class="post-info">
+                    <div class="flex">
+                        <p>Live Concert</p>
+                        <p>Date: 20th Nov 2023</p>
+                    </div>
+                    <div class="flex">
+                        <p>Location: Mumbai</p>
+                        <p><i class="fas fa-heart"></i> 450 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <img src="images/artists/mandeep.jpg" alt="">
+                <div class="post-info">
+                    <div class="flex">
+                        <p>Award Ceremony</p>
+                        <p>Date: 15th Dec 2023</p>
+                    </div>
+                    <div class="flex">
+                        <p>Location: Los Angeles</p>
+                        <p><i class="fas fa-heart"></i> 900 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <video src=""></video>
+                <div class="post-info">
+                    <div class="flex">
+                        <p>Special Moments</p>
+                        <p>Date: 1st Jan 2024</p>
+                    </div>
+                    <div class="flex">
+                        <p>Location: New York</p>
+                        <p><i class="fas fa-heart"></i> 1200 Likes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="tab-buttons">
-            <button class="tab-button active" onclick="showTab(0)">
-                Events
-            </button>
+            <button class="tab-button active" onclick="showTab(0)">Events</button>
             <button class="tab-button" onclick="showTab(1)">Requests</button>
         </div>
 
@@ -46,21 +103,11 @@
         <table id="data-table">
             <thead>
                 <tr>
-                    <th onclick="sortTable(0)">
-                        Event Name <i class="fas fa-sort sort-icon"></i>
-                    </th>
-                    <th onclick="sortTable(1)">
-                        Type <i class="fas fa-sort sort-icon"></i>
-                    </th>
-                    <th onclick="sortTable(2)">
-                        Date <i class="fas fa-sort sort-icon"></i>
-                    </th>
-                    <th onclick="sortTable(3)">
-                        Venue <i class="fas fa-sort sort-icon"></i>
-                    </th>
-                    <th onclick="sortTable(4)">
-                        Status <i class="fas fa-sort sort-icon"></i>
-                    </th>
+                    <th onclick="sortTable(0)">Event Name <i class="fas fa-sort sort-icon"></i></th>
+                    <th onclick="sortTable(1)">Type <i class="fas fa-sort sort-icon"></i></th>
+                    <th onclick="sortTable(2)">Date <i class="fas fa-sort sort-icon"></i></th>
+                    <th onclick="sortTable(3)">Venue <i class="fas fa-sort sort-icon"></i></th>
+                    <th onclick="sortTable(4)">Status <i class="fas fa-sort sort-icon"></i></th>
                 </tr>
             </thead>
             <tbody></tbody>
