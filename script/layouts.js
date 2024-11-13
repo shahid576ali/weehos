@@ -27,20 +27,21 @@ function loadPage(page) {
       switch (page) {
         case 'home':
           loadScript('js/home.js');
+          loadScript('js/layouts.js');
           loadScript('js/cardslide.js');
           loadCSS('style/home.css');
           break;
         case 'about':
-          loadCSS("style/about.css");
-          loadScript("js/about.js");
-          loadScript("https://unpkg.com/scrollreveal");
+          loadCSS('style/about.css');
+          loadScript('js/about.js');
+          loadScript('https://unpkg.com/scrollreveal');
           break;
         case 'contactus':
           loadCSS('style/contactus.css');
           break;
         case 'program':
           loadCSS('style/program.css');
-          loadScript('js/program.js')
+          loadScript('js/program.js');
           break;
         case 'artist':
           loadScript('js/artist.js');
@@ -52,36 +53,47 @@ function loadPage(page) {
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
           loadScript('js/priview.js');
-          loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js', () => {
-            document.querySelectorAll("textarea").forEach((textarea) => {
-              ClassicEditor.create(textarea).catch((error) => {
-                console.error(error);
-              });
-            });
-            document
-              .getElementById("wr_form")
-              .addEventListener("submit", (event) => {
-                editors.forEach((editor, index) => {
-                  document.querySelectorAll("textarea")[index].value =
-                    editor.getData();
+          loadScript(
+            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
+            () => {
+              document.querySelectorAll('textarea').forEach((textarea) => {
+                ClassicEditor.create(textarea).catch((error) => {
+                  console.error(error);
                 });
               });
-          });
+              document
+                .getElementById('wr_form')
+                .addEventListener('submit', (event) => {
+                  editors.forEach((editor, index) => {
+                    document.querySelectorAll('textarea')[index].value =
+                      editor.getData();
+                  });
+                });
+            }
+          );
           loadScript('js/texteditor.js');
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');
-          loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js')
-          loadScript('js/coverimage.js')
+          loadScript(
+            'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js'
+          );
+          loadScript('js/coverimage.js');
           break;
         case 'addperformer':
           loadCSS('style/addperformer.css');
-          loadScript("https://code.jquery.com/jquery-3.6.0.min.js");
-          loadScript('js/addperformer.js')
+          loadScript('https://code.jquery.com/jquery-3.6.0.min.js');
+          loadScript('js/addperformer.js');
           break;
         case 'artistprofile':
           loadCSS('style/artistprofile.css');
           loadScript('js/artistprofile.js');
+          break;
+        case 'eventdetails':
+          loadCSS('style/eventdetails.css');
+          loadScript('js/eventdetails.js');
+          break;
+        default:
           break;
       }
     })

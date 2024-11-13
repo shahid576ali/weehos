@@ -1,0 +1,413 @@
+<link rel="stylesheet" href="style/eventdetails.css">
+<script src="script/eventdetails.js"></script>
+<div class="content">
+    <div class="page-wrapper" id="page-wrapper">
+        <main class="main-section">
+            <section class="movie-hero">
+                <div class="movie-hero__background"></div>
+                <div class="movie-hero__overlay"></div>
+                <div class="movie-hero__content">
+                    <div class="movie-poster">
+                        <img src="images/artists/familygettogether-photo.jpg" alt="Event Poster" />
+                    </div>
+                    <div class="movie-details">
+                        <h1 class="movie-title">Event Names</h1>
+                        <div class="movie-rating">
+                            <div class="rating-score">
+                                <svg class="icon-star" width="24" height="24">
+                                    <use href="#icon-star"></use>
+                                </svg>
+                                <span class="score">8.2/10</span>
+                                <span class="votes">(64.8K Votes)</span>
+                            </div>
+                            <button class="rate rate-btn">Rate now</button>
+                            <div id="rating-popup" class="popup" style="display: none">
+                                <div class="popup-content">
+                                    <span class="close">&times;</span>
+                                    <h2>Rate the Event</h2>
+                                    <form id="rating-form" class="rating-form">
+                                        <label for="rating">Rating (0-10):</label>
+                                        <input type="range" id="rating" class="rating-input" name="rating" min="0"
+                                            max="10" value="0" />
+                                        <span id="rating-value" class="rating-value">0</span>
+                                        <label for="hashtags">Hashtags:</label>
+                                        <div id="hashtag-suggestions"></div>
+                                        <input type="text" id="hashtags" name="hashtags" placeholder="Add hashtags" />
+                                        <label for="review">Review:</label>
+                                        <textarea id="review" name="review" rows="4"
+                                            placeholder="Write your review here..."></textarea>
+                                        <button type="submit" class="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-meta">
+                            <span class="meta-item">2D</span>
+                            <span class="meta-item">Hindi</span>
+                            <span class="meta-item">1h</span>
+                            <span class="meta-item">Comedy</span>
+                            <span class="meta-item">UA</span>
+                            <span class="meta-item">Date</span>
+                        </div>
+                        <button id="bookBtn" class="book-btn">Book Event</button>
+                        <div id="bookingConfirmation" class="booking-confirmation" style="display: none">
+                            Event booked successfully!
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sticky-header" id="stickyHeader">
+                <div class="sticky-header__content">
+                    <h2 class="sticky-header__title">Event Names</h2>
+                    <button id="stickyBookBtn" class="sticky-header__book-btn">
+                        Book Event
+                    </button>
+                    <div id="bookingConfirmation" class="booking-confirmation" style="display: none">
+                        Event booked successfully!
+                    </div>
+                </div>
+            </section>
+
+            <div class="main-content">
+                <section class="about-movie">
+                    <h2 class="section-title">About the Event</h2>
+                    <p class="movie-description">
+                        Join us for an unforgettable evening at the Annual Starlight Gala!
+                        Celebrate under the twinkling stars with live music, delectable cuisine,
+                        and captivating performances. Whether you’re a seasoned attendee or a first-timer,
+                        this elegant affair promises enchantment and camaraderie.
+                        Reserve your spot now and be part of a night to remember!
+                    </p>
+                </section>
+
+                <section class="cast-section">
+                    <h2 class="section-title">Cast</h2>
+                    <div class="cast-slider">
+                        <button class="slider-arrow prev-arrow" aria-label="Previous cast members">
+                            &lt;
+                        </button>
+                        <div class="cast-container">
+                            <a href="https://weeho.com/person/mandeep/" style="text-decoration: none">
+                                <div class="cast-member">
+                                    <img src="images/artists/mandeep.jpg" alt="Mandeep Singh" class="cast-image" />
+                                    <h3 class="cast-name">Mandeep Singh</h3>
+                                    <p class="cast-role">Singer</p>
+                                </div>
+                            </a>
+                            <a href="https://weeho.com/person/naviin/" style="text-decoration: none">
+                                <div class="cast-member">
+                                    <img src="images/artists/mandeep.jpg" alt="Naviin" class="cast-image" />
+                                    <h3 class="cast-name">Naviin</h3>
+                                    <p class="cast-role">Singer</p>
+                                </div>
+                            </a>
+                            <a href="https://weeho.com/person/rupali/" style="text-decoration: none">
+                                <div class="cast-member">
+                                    <img src="images/artists/mandeep.jpg" alt="Rupali" class="cast-image" />
+                                    <h3 class="cast-name">Rupali</h3>
+                                    <p class="cast-role">Singer</p>
+                                </div>
+                            </a>
+                        </div>
+                        <button class="slider-arrow next-arrow" aria-label="Next cast members">
+                            &gt;
+                        </button>
+                    </div>
+                </section>
+
+                <section class="top-reviews">
+                    <div class="reviews-header">
+                        <h2>Top Reviews</h2>
+                        <a href="review.html" class="see-all">
+                            See all
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="review-slider">
+                        <button class="slider-arrow prev-arrow" aria-label="Previous cast members">
+                            &lt;
+                        </button>
+                        <div class="review-container">
+                            <div class="review-block">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="Reviewer"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">User1</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>10/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-tags">
+                                    #SuperDirection #GreatPerformance
+                                </p>
+                                <p class="review-text">
+                                    The event was absolutely fantastic! The direction was superb
+                                    and the performance was top-notch.
+                                </p>
+                                <div class="review-actions">
+                                    <button class="like-button">
+                                        <svg width="16" height="16">
+                                            <use href="#icon-like"></use>
+                                        </svg>
+                                        <span>3.2K</span>
+                                    </button>
+                                    <span class="review-date">16 Days ago</span>
+                                </div>
+                            </div>
+                            <div class="review-block">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="Reviewer"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">User2</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>9/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-tags">#Rocking #WellDone</p>
+                                <p class="review-text">
+                                    This event rocks! It's so well-made and kept me engaged
+                                    throughout.
+                                </p>
+                                <div class="review-actions">
+                                    <button class="like-button">
+                                        <svg width="16" height="16">
+                                            <use href="#icon-like"></use>
+                                        </svg>
+                                        <span>2.8K</span>
+                                    </button>
+                                    <span class="review-date">15 Days ago</span>
+                                </div>
+                            </div>
+                            <div class="review-block">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="Reviewer"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">User3</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>10/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-tags">
+                                    #SuperDirection #GreatPerformance
+                                </p>
+                                <p class="review-text">
+                                    The event was absolutely fantastic! The direction was superb
+                                    and the performance was top-notch.
+                                </p>
+                                <div class="review-actions">
+                                    <button class="like-button">
+                                        <svg width="16" height="16">
+                                            <use href="#icon-like"></use>
+                                        </svg>
+                                        <span>3.2K</span>
+                                    </button>
+                                    <span class="review-date">16 Days ago</span>
+                                </div>
+                            </div>
+                            <!-- Add more review blocks -->
+                        </div>
+                        <button class="slider-arrow next-arrow" aria-label="Next cast members">
+                            &gt;
+                        </button>
+                    </div>
+                </section>
+                <section class="critic-reviews">
+                    <div class="reviews-header">
+                        <h2>Critic Reviews</h2>
+                        <a href="review.html" class="see-all">
+                            See all
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="review-slider">
+                        <button class="slider-arrow prev-arrow" aria-label="Previous review">
+                            &lt;
+                        </button>
+                        <div class="review-container">
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="India TV"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">India TV</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>7/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-title">Event Name</p>
+                                <p class="review-text">
+                                    A supernatural rollercoaster with good blend of comedy.
+                                </p>
+                                <button class="read-more">...more</button>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="Firstpost"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">Firstpost</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>7/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-title">Event Name</p>
+                                <p class="review-text">A spooky yet entertaining folklore.</p>
+                                <button class="read-more">...more</button>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="reviewer-info">
+                                    <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="Times Now"
+                                        class="reviewer-image" />
+                                    <div class="reviewer-details">
+                                        <p class="reviewer-name">Times Now</p>
+                                        <div class="rating">
+                                            <svg width="16" height="16">
+                                                <use href="#icon-star"></use>
+                                            </svg>
+                                            <span>7/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-title">Event Name</p>
+                                <p class="review-text">
+                                    A Unique Blend of Comedy and Horror.
+                                </p>
+                                <button class="read-more">...more</button>
+                            </div>
+                            <!-- Add more review cards -->
+                        </div>
+                        <button class="slider-arrow next-arrow" aria-label="Next review">
+                            &gt;
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <section class="recommendations">
+                <div class="recommendations__header">
+                    <h2 class="recommendations__title">You might also like</h2>
+                    <a href="https://in.bookmyshow.com/explore/movies-mumbai" class="recommendations__view-all">
+                        View All
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="movie-carousel">
+                    <button class="movie-carousel__nav movie-carousel__nav--prev"
+                        aria-label="Previous recommended movies">
+                        &lt;
+                    </button>
+                    <div class="movie-carousel__container">
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/familygettogether.jpg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Name</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/friends.jpeg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Name</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/miceevent.jpg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Name</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/familygettogether.jpg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Name</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/friends.jpeg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Name</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://weeho.com/location/event" class="movie-card">
+                            <img src="img/miceevent.jpg" alt="Event Name" class="movie-card__poster" />
+                            <div class="movie-card__info">
+                                <h3 class="movie-card__title">Event Names</h3>
+                                <div class="movie-card__rating">
+                                    <img src="https://in.bmscdn.com/moviemode/tvod/star-icon.png" alt="Rating"
+                                        class="movie-card__star" />
+                                    <span>Rating</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Repeat similar structure for other movie cards -->
+                    </div>
+                    <button class="movie-carousel__nav movie-carousel__nav--next" aria-label="Next recommended movies">
+                        &gt;
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
