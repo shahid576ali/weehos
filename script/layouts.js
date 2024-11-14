@@ -93,6 +93,10 @@ function loadPage(page) {
           loadCSS('style/eventdetails.css');
           loadScript('js/eventdetails.js');
           break;
+        case 'adminprofile':
+          loadCSS('style/adminprofile.css');
+          loadScript('js/adminprofile.js');
+          break;
         default:
           break;
       }
