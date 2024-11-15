@@ -97,6 +97,10 @@ function loadPage(page) {
           loadCSS('style/adminprofile.css');
           loadScript('js/adminprofile.js');
           break;
+        case 'alluserspage':
+          loadCSS('style/alluserspage.css');
+          loadScript('js/alluserspage.js');
+          break;
         default:
           break;
       }

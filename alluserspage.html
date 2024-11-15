@@ -1,0 +1,127 @@
+<div class="content">
+    <div class="main-container">
+        <div class="main-block"></div>
+        <div class="main">
+            <div class="data-container">
+                <div class="main-content">
+                    <div class="content">
+                        <div class="main-table">
+                            <div class="table-responsive">
+                                <div class="wrapper">
+                                    <div class="table-controls">
+                                        <div class="entries-control">
+                                            <label for="entriesPerPage">Show</label>
+                                            <select id="entriesPerPage">
+                                                <option value="5">5</option>
+                                                <option value="10" selected>10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                            </select>
+                                            <label for="entriesPerPage">entries</label>
+                                        </div>
+                                        <div class="search-control">
+                                            <input type="text" id="searchInput" placeholder="Search...">
+                                        </div>
+                                    </div>
+                                    <div class="row table-wrapper">
+                                        <div id="notificationArea">
+                                            <span id="notificationText"></span>
+                                            <img src="img/about.png" alt="about" id="aboutIcon"
+                                                style="cursor: pointer; margin-left: 10px;">
+                                        </div>
+                                        <table id="eventTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Photo <i class="fas fa-sort"></i></th>
+                                                    <th>User ID <i class="fas fa-sort"></i></th>
+                                                    <th>Name <i class="fas fa-sort"></i></th>
+                                                    <th>Position <i class="fas fa-sort"></i></th>
+                                                    <th>Email <i class="fas fa-sort"></i></th>
+                                                    <th>Phone <i class="fas fa-sort"></i></th>
+                                                    <th>Department <i class="fas fa-sort"></i></th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pagination-controls">
+                                        <div id="entryCount"></div>
+                                        <div class="pagination-buttons">
+                                            <button id="prevButton" disabled>Prev</button>
+                                            <span id="paginationNumbers"></span>
+                                            <button id="nextButton" disabled>Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="positionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Change Position</h2>
+            <div class="pos">
+                <select id="positionSelect">
+                    <option value="Performer">Performer</option>
+                    <option value="User">User</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Social Media">Social Media</option>
+                </select>
+                <button id="savePosition">Save</button>
+            </div>
+        </div>
+    </div>
+    <div id="photoModal" class="photo-modal">
+        <img class="photo-modal-content" id="enlargedPhoto">
+    </div>
+    <div id="emailModal" class="modal">
+        <div class="modal-content-email">
+            <span class="close">&times;</span>
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="header-img">
+                        <img src="img/Weeho.png" alt="Weeho">
+                    </div>
+                    <p>Hi, <span id="performerName"></span></p>
+                    <p>We are going to organize an event and we need you to be there and show your talent to the
+                        attendees.
+                        Here are the details of the event.</p>
+                </div>
+                <div class="event-details">
+                    <h3>Event Name: <input type="text" id="eventName"></h3>
+                    <h3>About: <textarea id="eventDescription"></textarea></h3>
+                    <h3>Date & Time: <input type="datetime-local" id="eventDateTime"></h3>
+                    <h3>Venue:
+                        <input type="text" id="eventVenue" placeholder="Enter venue">
+                    </h3>
+                    <h3>Event Organizer:
+                        <input type="text" id="organizerName" placeholder="Organizer name">
+                        <input type="email" id="organizerEmail" placeholder="Organizer email">
+                        <input type="tel" id="organizerPhone" placeholder="Organizer phone number">
+                    </h3>
+                    <h3>Select Position:</h3>
+                    <select id="roleSelect">
+                        <option value="">All Positions</option>
+                        <option value="Performer">Performer</option>
+                        <option value="User">User</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Social Media">Social Media</option>
+                    </select>
+                    <h3>Select Performers:</h3>
+                    <div class="performers-selection">
+                        <select id="performersSelect" multiple>
+
+                        </select>
+                    </div>
+                    <button id="sendInvitation">Send Invitation to Selected Performers</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
