@@ -101,6 +101,10 @@ function loadPage(page) {
           loadCSS('style/alluserspage.css');
           loadScript('js/alluserspage.js');
           break;
+        case 'review':
+          loadCSS('style/review.css');
+          loadScript('js/review.js');
+          break;
         default:
           break;
       }

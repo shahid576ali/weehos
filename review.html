@@ -1,0 +1,145 @@
+<div class="content">
+    <div class="reviews_main">
+        <div class="reviews__RatingAndReviewsContainer">
+            <section class="reviews__RatingContainer">
+                <!-- <div class="reviews__RatingSvg">
+                <svg width="105" height="36"></svg>
+              </div> -->
+                <span class="rating_vote">
+                    <!-- <svg width="14" height="14"></svg> -->
+                    <div class="review_rating">8.2/10</div>
+                    <div class="review_vote">71.1K Votes</div>
+                </span>
+            </section>
+            <div class="review_event">Event Name</div>
+            <section class="event_book">
+                <span class="text"><button id="bookBtn" class="book_btn">Book Event</button>
+                    <div id="bookingConfirmation" class="booking-confirmation"
+                        style="display: none; background-color: #4caf50">
+                        Event booked successfully!
+                    </div>
+                </span>
+            </section>
+            <div class="reviews__ReviewOptionsContainer">
+                <section class="review review_user">User reviews (3)</section>
+                <section class="review review_critic">Critic reviews (4)</section>
+            </div>
+            <section class="main_reviews" id="main_reviews">
+                <div class="user_review user_review_1 user_container user_reviews_container">
+                    <div class="rate">
+                        <div class="add_rating">
+                            <h5 class="add_rating_h5">Add your rating &amp; review</h5>
+                            <h6 class="your_rating">Your ratings matter</h6>
+                        </div>
+                        <button class="rate_btn rate-btn">
+                            <span>Rate now</span>
+                        </button>
+                        <div id="rating-popup" class="popup" style="display: none">
+                            <div class="popup-content">
+                                <!-- <span class="close">&times;</span> -->
+                                <h2>Rate the Event</h2>
+                                <form id="rating-form" class="rating-form">
+                                    <label for="rating">Rating (0-10):</label>
+                                    <input type="range" id="rating" class="rating-input" name="rating" min="0" max="10"
+                                        value="0" />
+                                    <span id="rating-value" class="rating-value">0</span>
+
+                                    <label for="hashtags">Hashtags:</label>
+                                    <div id="hashtag-suggestions"></div>
+                                    <input type="text" id="hashtags" name="hashtags" placeholder="Add hashtags" />
+
+                                    <label for="review">Review:</label>
+                                    <textarea id="review" name="review" rows="4"
+                                        placeholder="Write your review here..."></textarea>
+
+                                    <button type="submit" class="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hashtag_div">
+                        <h4 class="summary_heading">Summary of 20 reviews.</h4>
+                        <section class="hashtag_section">
+                            <div class="hash_content">
+                                <div data-slides-to-scroll="0" data-element-width="0" data-arrow-vertical-offset="17px"
+                                    class="hashtags">
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#GreatActing</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">17170</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#AwesomeStory</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">16690</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#SuperDirection</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">15986</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#Wellmade</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">15027</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#Blockbuster</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">9787</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#WowMusic</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">8993</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#Rocking</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">8412</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#Unbelievable</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">5913</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#Inspiring</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">3965</span>
+                                        </div>
+                                    </div>
+                                    <div class="hash_elements element">
+                                        <span class="hash_span real_hash">#OneTimeWatch</span>
+                                        <div class="hash_rate hash_rating">
+                                            <span class="hash_votes">2369</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="user helpful_reviews_container">
+                        <h4 class="helpful_reviews">Most helpful reviews</h4>
+                        <div class="review-user-container" id="review-user-container">
+                        </div>
+                    </div>
+                </div>
+                <div class="user_review critic_container critic_container_0 critic_reviews_container">
+                    <div class="critic">
+                        <div class="review-critic-container" id="review-critic-container">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
