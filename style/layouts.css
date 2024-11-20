@@ -70,30 +70,16 @@ body {
 }
 
 .input input {
-  /* width: 93%; */
   height: 30px;
   border-color: transparent;
   outline-color: transparent;
-  font-size: 13.9px;
   opacity: 90%;
   font-weight: 520;
-}
-
-.input {
-  /* flex-grow: 1; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* background-color: #f5f5f5; */
-  /* border-radius: 20px; */
-}
-
-.input input {
   flex-grow: 1;
   border: none;
   background: transparent;
   padding: 10px;
   font-size: 16px;
-  /* width: 100px; */
 }
 
 .input ion-icon {
@@ -208,7 +194,7 @@ ul.navitem li {
   text-decoration: underline;
   text-underline-offset: 4px;
   font-weight: bold;
-  color: #000; /* Adjust to match your design */
+  color: #000;
 }
 
 
@@ -442,12 +428,6 @@ div .text {
   align-items: center;
 }
 
-.container a:hover {
-  /* background-color: #ececec;
-  border: 1px solid #ececec;
-  transition: all 0.5s; */
-}
-
 .container .logo {
   padding-left: 20px;
 }
@@ -650,6 +630,12 @@ ul {
   padding: 20px;
 }
 
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .sidebar .close-btn {
   position: absolute;
   top: 10px;
@@ -664,6 +650,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .sidebar .navitem li,
@@ -680,27 +667,18 @@ ul {
 
 .sidebar .signin {
   display: block;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 @media (min-width: 1025px) {
   .sidebar .signin {
     display: none;
   }
-
-  .input {
-    /* width: 50px; */
-    /* margin-left: -80px; */
-  }
 }
 
 @media (max-width: 1024px) {
   .signin {
     display: none;
-  }
-
-  .input {
-    /* margin-right: 10px; */
   }
 }
 
@@ -771,11 +749,6 @@ ul {
     flex-direction: column;
   }
 
-  .navitem,
-  .navitem1 {
-    padding: 5px 0;
-  }
-
   .btn-customized {
     display: flex;
     align-items: center;
@@ -795,15 +768,12 @@ ul {
   .navitem1 {
     flex-direction: column;
     align-items: center;
-  }
-
-  .navitem li,
-  .navitem1 li {
+    padding: 5px 0;
     margin: 10px 0;
   }
 
   .content {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -816,5 +786,11 @@ ul {
 @media (max-width: 350px) {
   .footer-col {
     width: 80%;
+  }
+}
+
+@media (max-width: 348px) {
+  .content {
+    margin-top: 80px;
   }
 }

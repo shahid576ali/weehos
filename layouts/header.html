@@ -1,10 +1,9 @@
 <header>
     <div class="navigation">
         <nav class="navbar">
-          <a href="index.html"
-            ><a href="index.html"
-              ><img src="images/weehologo.png" class="brand-logo" alt="" /></a
-          ></a>
+          <a href="index.html">
+            <img src="images/weehologo.png" class="brand-logo" alt="" />
+          </a>
           <div class="input">
             <ion-icon name="search"></ion-icon>
             <input
@@ -35,18 +34,14 @@
         <div class="sidebar">
           <div class="sidebar-content">
             <span class="close-btn">&times;</span>
-            <button
-              class="signin"
-              onclick="document.getElementById('id01').style.display='block'"
-            >
-              Book Your Event
-            </button>
-            <button
-              class="signin"
-              onclick="document.getElementById('id01').style.display='block'"
-            >
-              Register as Artist
-            </button>
+            <div class="sidebar-buttons">
+              <button class="signin" onclick="document.getElementById('id01').style.display='block'">
+                Book Your Event
+              </button>
+              <button class="signin" onclick="document.getElementById('id01').style.display='block'">
+                Register as Artist
+              </button>
+            </div>
             <ul class="navitem">
               <li><a onclick="loadPage('home'); return false;">Home</a></li>
               <li><a onclick="loadPage('about')">Events<span>NEW</span></a></li>
