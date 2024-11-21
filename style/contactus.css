@@ -3,14 +3,11 @@
 }
 
 .content .loginbody {
-/* display: flex; */
+display: flex;
 justify-content: center;
 align-items: center;
 height: 80%;
-Padding-left: 90px;
-padding-top: 20px;
 font-family: 'Roboto', sans-serif;
-background-color: #f4f4f9;
 }
 
 .content .container {
@@ -76,10 +73,6 @@ margin-top: 20px;
 transition: background-color 0.3s ease;
 }
 
-/* .content .form-container button:hover {
-background-color: #ff6400;
-} */
-
 .content .form-container .social-signup {
 display: flex;
 flex-direction: column;
@@ -111,10 +104,11 @@ margin-right: 10px;
 
 .content .image-container {
 flex: 1;
-background: url('../coo.jpeg.jpg') center/cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
+background: url('/images/background/contact.jpg');
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 border-radius: 8px;
 }
 
@@ -140,17 +134,15 @@ text-align: center;
 .container {
     flex-direction: column;
     box-shadow: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
 }
 
 .image-container {
     display: none;
 }
 }
-
-/* img, svg {
-vertical-align: middle;
-width: 290px;
-/* text-align: center; 
-margin-left: 490px;
-margin-bottom: 30px;
-} */

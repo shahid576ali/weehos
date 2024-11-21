@@ -177,6 +177,7 @@ thead th {
     background-color: #a20d0d;
     color: white;
     border-radius: 5px;
+    border: none;
 }
 
 @media (max-width: 768px) {

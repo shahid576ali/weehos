@@ -1,10 +1,9 @@
 .content {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 1200px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
@@ -29,7 +28,8 @@ button {
     border-radius: 5px;
 }
 
-#crop-button, #submit-button {
+#crop-button,
+#submit-button {
     background-color: #a20d0d;
     color: #fff;
     border: none;
@@ -44,7 +44,8 @@ td button {
     margin-right: 10px;
 }
 
-#crop-button:hover, #submit-button:hover {
+#crop-button:hover,
+#submit-button:hover {
     background-color: #ff6400;
     transform: scale(1.02);
 }
@@ -211,6 +212,17 @@ tr:hover {
     max-width: 100%;
 }
 
+@media (min-width: 768px) {
+    .content {
+        margin: auto;
+    }
+}
+
+@media (max-width: 1104px) and (min-width: 1025px) {
+    .content {
+        margin-top: 30px;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -247,5 +259,11 @@ tr:hover {
     td button {
         margin-right: 3px;
         padding: 4px 8px;
+    }
+}
+
+@media (max-width: 458px) {
+    .content {
+        margin: 100px auto;
     }
 }

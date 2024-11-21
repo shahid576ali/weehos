@@ -670,6 +670,12 @@ ul {
   margin: 5px 0;
 }
 
+@media (max-width: 1083px) and (min-width: 1025px) {
+  .content {
+    margin-top: 20px;
+  }
+}
+
 @media (min-width: 1025px) {
   .sidebar .signin {
     display: none;
@@ -773,7 +779,7 @@ ul {
   }
 
   .content {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 
