@@ -8,6 +8,8 @@
     box-shadow: 2px 2px 15px gray;
     padding: 20px 20px 0px 20px;
     border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
 }
 
 .block:last-child {
@@ -49,7 +51,6 @@
 #data-table {
     width: 100%;
     border-collapse: collapse;
-    overflow-x: auto;
 }
 
 thead {
@@ -64,7 +65,7 @@ td {
 }
 
 th {
-    background-color: #f2f2f2;
+    color: white;
 }
 
 tr:nth-child(even) {
@@ -151,4 +152,10 @@ tbody tr:hover {
 .postpone:hover,
 .pagination button:hover {
     transform: translate(2px, 2px) scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        flex-direction: column;
+    }
 }
