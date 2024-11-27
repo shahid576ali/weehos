@@ -51,11 +51,6 @@ function loadPage(page) {
           loadCSS('style/blog.css');
           break;
 
-        case 'upcomingevent':
-          loadScript('js/upcomingevent.js');
-          loadCSS('style/upcomingevent.css');
-          break;
-
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
           loadScript('js/priview.js');
