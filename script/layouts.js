@@ -50,6 +50,7 @@ function loadPage(page) {
         case 'blog':
           loadCSS('style/blog.css');
           break;
+
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
           loadScript('script/priview.js');
