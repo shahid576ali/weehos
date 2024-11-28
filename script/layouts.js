@@ -26,14 +26,14 @@ function loadPage(page) {
       // Load resources based on the current page
       switch (page) {
         case 'home':
-          loadScript('script/home.js');
-          loadScript('script/layouts.js');
-          loadScript('script/cardslide.js');
+          loadScript('js/home.js');
+          loadScript('js/layouts.js');
+          loadScript('js/cardslide.js');
           loadCSS('style/home.css');
           break;
         case 'about':
           loadCSS('style/about.css');
-          loadScript('script/about.js');
+          loadScript('js/about.js');
           loadScript('https://unpkg.com/scrollreveal');
           break;
         case 'contactus':
@@ -41,10 +41,10 @@ function loadPage(page) {
           break;
         case 'program':
           loadCSS('style/program.css');
-          loadScript('script/program.js');
+          loadScript('js/program.js');
           break;
         case 'artist':
-          loadScript('script/artist.js');
+          loadScript('js/artist.js');
           loadCSS('style/artist.css');
           break;
         case 'blog':
@@ -52,7 +52,7 @@ function loadPage(page) {
           break;
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
-          loadScript('script/priview.js');
+          loadScript('js/priview.js');
           loadScript(
             'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
             () => {
@@ -71,47 +71,39 @@ function loadPage(page) {
                 });
             }
           );
-          loadScript('script/texteditor.js');
+          loadScript('js/texteditor.js');
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');
           loadScript(
-            'https://cdnjs.cloudflare.com/ajax/libs/cropperscript/1.5.12/cropper.min.js'
+            'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js'
           );
-          loadScript('script/coverimage.js');
+          loadScript('js/coverimage.js');
           break;
         case 'addperformer':
           loadCSS('style/addperformer.css');
           loadScript('https://code.jquery.com/jquery-3.6.0.min.js');
-          loadScript('script/addperformer.js');
+          loadScript('js/addperformer.js');
           break;
         case 'artistprofile':
           loadCSS('style/artistprofile.css');
-          loadScript('script/artistprofile.js');
+          loadScript('js/artistprofile.js');
           break;
         case 'eventdetails':
           loadCSS('style/eventdetails.css');
-          loadScript('script/eventdetails.js');
+          loadScript('js/eventdetails.js');
           break;
         case 'adminprofile':
           loadCSS('style/adminprofile.css');
-          loadScript('script/adminprofile.js');
+          loadScript('js/adminprofile.js');
           break;
         case 'alluserspage':
           loadCSS('style/alluserspage.css');
-          loadScript('script/alluserspage.js');
+          loadScript('js/alluserspage.js');
           break;
         case 'review':
           loadCSS('style/review.css');
-          loadScript('script/review.js');
-          break;
-        case 'signin':
-          loadCSS('style/signin.css');
-          loadScript('script/signin.js');
-          break;
-        case 'signup':
-          loadCSS('style/signup.css');
-          loadScript('script/signup.js');
+          loadScript('js/review.js');
           break;
         default:
           break;
