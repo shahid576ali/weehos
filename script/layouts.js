@@ -113,6 +113,18 @@ function loadPage(page) {
           loadCSS('style/signup.css');
           loadScript('script/signup.js');
           break;
+        case 'signinadmin':
+          loadCSS('style/usersignin.css');
+          break;
+        case 'signupadmin':
+          loadCSS('style/usersignup.css');
+          break;
+        case 'signinartist':
+          loadCSS('style/usersignin.css');
+          break;
+        case 'signupartist':
+          loadCSS('style/usersignup.css');
+          break;
         default:
           break;
       }
