@@ -115,15 +115,19 @@ function loadPage(page) {
           break;
         case 'signinadmin':
           loadCSS('style/usersignin.css');
+          loadScript('script/signinadmin.js');
           break;
         case 'signupadmin':
           loadCSS('style/usersignup.css');
+          loadScript('script/signupadmin.js');
           break;
         case 'signinartist':
           loadCSS('style/usersignin.css');
+          loadScript('script/signinartist.js');
           break;
         case 'signupartist':
           loadCSS('style/usersignup.css');
+          loadScript('script/signupartist.js');
           break;
         default:
           break;
