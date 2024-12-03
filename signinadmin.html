@@ -7,7 +7,7 @@
                 Don't have an account?
                 <a href="javascript:void(0);" onclick="loadPage('signupadmin')">Create a free account</a>
             </p>
-            <form onsubmit="handleSignin(event)">
+            <form onsubmit="handleSignin(event)" >
                 <label for="email">Email address:</label>
                 <input type="email" id="email" name="email" placeholder="Email address" required />
 
@@ -19,6 +19,16 @@
 
                 <button type="submit">Sign In →</button>
             </form>
+            <div class="social-signup">
+                <button style="color: black">
+                    <img src="images/icon/google.ico" alt="Google icon" /> Sign up
+                    with Google
+                </button>
+                <button style="color: black">
+                    <img src="images/icon/facebook.ico" alt="Facebook icon" />
+                    Sign up with Facebook
+                </button>
+            </div>
         </div>
     </div>
 </div>
