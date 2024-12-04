@@ -26,3 +26,15 @@ CREATE TABLE admins (
     organization VARCHAR(100),
     adminKey VARCHAR(50) NOT NULL UNIQUE
 );
+
+CREATE TABLE events (
+    event_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_name VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    event_type INT NOT NULL,
+    performer_id INT NOT NULL,
+    event_date DATE NOT NULL,
+    event_time TIME NOT NULL,
+    poster_image VARCHAR(255),
+    cover_image VARCHAR(255)
+);
