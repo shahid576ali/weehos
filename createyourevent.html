@@ -4,25 +4,15 @@
       <div class="form-container">
         <h1>Create Events Form</h1>
         <p>Our friendly team would love to hear from you.</p>
-        <form id="contactForm" method="post" action="preview.php">
+        <form id="contactForm" method="post" action="createyourevent.php">
           <div class="name-container">
             <div>
               <label for="event_name">Event Name:</label>
-              <input
-                type="text"
-                id="event_name"
-                name="event_name"
-                placeholder="Enter The Event Name"
-              />
+              <input type="text" id="event_name" name="event_name" placeholder="Enter The Event Name" />
             </div>
             <div>
               <label for="description">Description:</label>
-              <textarea
-                type="text"
-                id="description"
-                name="description"
-                placeholder="Describe your Event..."
-              ></textarea>
+              <textarea type="text" id="description" name="description" placeholder="Describe your Event..."></textarea>
             </div>
           </div>
           <div style="width: 100%">
@@ -47,73 +37,33 @@
           </div>
           <div style="width: 100%">
             <label for="date">Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              placeholder="Phone number"
-            />
+            <input type="date" id="date" name="date" placeholder="Phone number" />
           </div>
           <div style="width: 100%">
             <label for="time">Time:</label>
-            <input
-              type="time"
-              id="time"
-              name="time"
-              placeholder="Phone number"
-            />
+            <input type="time" id="time" name="time" placeholder="Phone number" />
           </div>
           <div style="width: 100%">
             <label for="posterImage">Poster Image:</label>
-            <input
-              type="file"
-              name="posterImage"
-              class="image"
-              id="posterImage"
-            />
+            <input type="file" name="posterImage" class="image" id="posterImage" />
           </div>
           <div style="width: 100%">
             <label for="coverImage">Cover Image:</label>
-            <input
-              type="file"
-              name="coverImage"
-              class="image"
-              id="coverImage"
-            />
+            <input type="file" name="coverImage" class="image" id="coverImage" />
           </div>
-          <input
-            type="hidden"
-            id="posterImageData"
-            name="posterImageData"
-          />
-          <input
-            type="hidden"
-            id="coverImageData"
-            name="coverImageData"
-          />
+          <input type="hidden" id="posterImageData" name="posterImageData" />
+          <input type="hidden" id="coverImageData" name="coverImageData" />
           <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
   </div>
-  <div
-    class="modal fade"
-    id="posterModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="modalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="posterModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalLabel">Crop Poster Image</h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
@@ -130,11 +80,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Cancel
           </button>
           <button type="button" class="btn btn-primary" id="cropPoster">
@@ -145,24 +91,12 @@
     </div>
   </div>
 
-  <div
-    class="modal fade"
-    id="coverModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="modalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="coverModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalLabel">Crop Cover Image</h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
@@ -179,11 +113,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Cancel
           </button>
           <button type="button" class="btn btn-primary" id="cropCover">
