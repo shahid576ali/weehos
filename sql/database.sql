@@ -36,5 +36,6 @@ CREATE TABLE events (
     event_date DATE NOT NULL,
     event_time TIME NOT NULL,
     poster_image VARCHAR(255),
-    cover_image VARCHAR(255)
+    cover_image VARCHAR(255),
+    FOREIGN KEY (performer_id) REFERENCES artists(artist_id)
 );
