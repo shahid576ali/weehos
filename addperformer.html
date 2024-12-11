@@ -57,6 +57,11 @@
                         </select>
                     </div>
 
+                    <div id="other_talent_div" style="display: none; width: 100%;">
+                        <label for="other_talent">Please specify your talent:</label>
+                        <input type="text" id="other_talent" name="other_talent" placeholder="Enter your talent">
+                    </div>
+
                     <div style="width: 100%;">
                         <label for="professional_or_ameature">Are you Amateur Or Professional ?:</label>
                         <select name="professional_or_ameature" id="professional_or_ameature">
@@ -77,11 +82,20 @@
                         <input id="about" name="about" placeholder="Brief note on your talent">
                     </div>
 
-
-
                     <button type="submit">Sumit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function toggleOtherTalentInput() {
+        const talentSelect = document.getElementById("area_of_talent");
+        const otherTalentDiv = document.getElementById("other_talent_div");
+        if (talentSelect.value === "Others") {
+            otherTalentDiv.style.display = "block";
+        } else {
+            otherTalentDiv.style.display = "none";
+        }
+    }
+</script>
