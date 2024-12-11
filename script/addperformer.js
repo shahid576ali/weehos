@@ -12,7 +12,7 @@ $(document).ready(function () {
             success: function (response) {
                 console.log("Response received:", response); // Log the response received from the server
                 if (response.trim() === 'ok') { // Trim the response to remove any whitespace
-                    alert("okdfd");
+                    alert("Performer added successfully!");
                     window.location.href = 'profile.html';
                 } else {
                     alert(response.trim());
@@ -20,5 +20,13 @@ $(document).ready(function () {
                 }
             }
         });
+    });
+
+    $("#area_of_talent").on('change', function () {
+        if ($(this).val() === "Others") {
+            $("#other_talent_div").show();
+        } else {
+            $("#other_talent_div").hide();
+        }
     });
 });
