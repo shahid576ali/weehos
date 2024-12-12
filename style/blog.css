@@ -23,7 +23,7 @@
 }
 
 .events-list .card:hover {
-    transform: translate(5px, 5px) rotate(1deg) scale(1.05);
+    transform: translate(2px, 2px) scale(1.05);
 }
 
 .events-list h2 {
@@ -65,7 +65,7 @@
 }
 
 .card:hover {
-    transform: translate(5px, 5px) rotate(1deg) scale(1.05);
+    transform: translate(2px, 2px) scale(1.05);
 }
 
 .content .card h3 {
