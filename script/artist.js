@@ -7,27 +7,27 @@ const categories = [
 
 const artists = {
     Musicians: [
-        { name: "Mandeep Singh", photo: "../img/mandeep.jpg", rating: 4.5 },
-        { name: "Naviin", photo: "../img/naviin.jpg", rating: 4.8 },
-        { name: "Bob Johnson", photo: "../img/mandeep.jpg", rating: 4.2 },
-        { name: "Alice Cooper", photo: "../img/naviin.jpg", rating: 4.7 },
-        { name: "David Bowie", photo: "../img/mandeep.jpg", rating: 5.0 },
-        { name: "Freddie Mercury", photo: "../img/naviin.jpg", rating: 5.0 },
-        { name: "Ella Fitzgerald", photo: "../img/mandeep.jpg", rating: 4.9 },
+        { name: "Mandeep Singh", photo: "images/artists/mandeep.jpg", rating: 4.5 },
+        { name: "Naviin", photo: "images/artists/naviin.jpg", rating: 4.8 },
+        { name: "Bob Johnson", photo: "images/artists/mandeep.jpg", rating: 4.2 },
+        { name: "Alice Cooper", photo: "images/artists/naviin.jpg", rating: 4.7 },
+        { name: "David Bowie", photo: "images/artists/mandeep.jpg", rating: 5.0 },
+        { name: "Freddie Mercury", photo: "images/artists/naviin.jpg", rating: 5.0 },
+        { name: "Ella Fitzgerald", photo: "images/artists/mandeep.jpg", rating: 4.9 },
     ],
     Poets: [
-        { name: "Alice Brown", photo: "../img/naviin.jpg", rating: 4.7 },
-        { name: "Charlie Davis", photo: "../img/mandeep.jpg", rating: 4.6 },
+        { name: "Alice Brown", photo: "images/artists/naviin.jpg", rating: 4.7 },
+        { name: "Charlie Davis", photo: "images/artists/mandeep.jpg", rating: 4.6 },
     ],
     Dancers: [
-        { name: "Eva Green", photo: "../img/mandeep.jpg", rating: 4.9 },
-        { name: "Tom Hardy", photo: "../img/naviin.jpg", rating: 4.8 },
-        { name: "Meryl Streep", photo: "../img/mandeep.jpg", rating: 5.0 },
-        { name: "Leonardo DiCaprio", photo: "../img/naviin.jpg", rating: 4.9 },
+        { name: "Eva Green", photo: "images/artists/mandeep.jpg", rating: 4.9 },
+        { name: "Tom Hardy", photo: "images/artists/naviin.jpg", rating: 4.8 },
+        { name: "Meryl Streep", photo: "images/artists/mandeep.jpg", rating: 5.0 },
+        { name: "Leonardo DiCaprio", photo: "images/artists/naviin.jpg", rating: 4.9 },
     ],
     Classical: [
-        { name: "Marina Abramović", photo: "../img/mandeep.jpg", rating: 4.7 },
-        { name: "Yoko Ono", photo: "../img/naviin.jpg", rating: 4.5 },
+        { name: "Marina Abramović", photo: "images/artists/mandeep.jpg", rating: 4.7 },
+        { name: "Yoko Ono", photo: "images/artists/naviin.jpg", rating: 4.5 },
     ],
 };
 
