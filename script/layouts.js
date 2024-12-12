@@ -52,7 +52,7 @@ function loadPage(page) {
           break;
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
-          loadScript('script/priview.js');
+          loadScript('script/preview.js');
           loadScript(
             'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
             () => {
