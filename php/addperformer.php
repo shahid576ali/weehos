@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $description = $_POST['description'] ?? null;
     $age = $_POST['age'];
     $area_of_talent = $_POST['area_of_talent'];
     $other_talent = $_POST['other_talent'] ?? null;
@@ -19,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imagePath = $targetDir . basename($image['name']);
     move_uploaded_file($image['tmp_name'], $imagePath);
 
-    $sql = "INSERT INTO performers (first_name, last_name, email, phone, age, area_of_talent, professional_or_amateur, experience, about, image)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO performers (first_name, last_name, email, phone, description, age, area_of_talent, professional_or_amateur, experience, about, image)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssisssss", $firstName, $lastName, $email, $phone, $age, $final_talent, $professional_or_amateur, $experience, $about, $imagePath);
+    $stmt->bind_param("sssssisssss", $firstName, $lastName, $email, $phone, $description, $age, $final_talent, $professional_or_amateur, $experience, $about, $imagePath);
 
     if ($stmt->execute()) {
         echo "Performer added successfully!";

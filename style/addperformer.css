@@ -37,7 +37,6 @@
 }
 
 .content .form-container label {
-    display: block;
     margin: 10px 0 5px;
     color: white;
     font-weight: bold;
@@ -55,7 +54,7 @@ select {
     background-color: #f9f9f9;
 }
 
-.content .form-container button {
+.content .form-container .submit {
     width: 100%;
     padding: 12px;
     background-color: #ad2020;
@@ -66,6 +65,10 @@ select {
     font-size: 16px;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+}
+
+.content .form-container .submit:hover {
+    background-color: #ff6400;
 }
 
 .content .form-container .social-signup {

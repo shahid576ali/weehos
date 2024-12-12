@@ -71,7 +71,6 @@ function loadPage(page) {
                 });
             }
           );
-          loadScript('script/texteditor.js');
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');
@@ -84,6 +83,24 @@ function loadPage(page) {
           loadCSS('style/addperformer.css');
           loadScript('https://code.jquery.com/jquery-3.6.0.min.js');
           loadScript('script/addperformer.js');
+          loadScript(
+            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
+            () => {
+              document.querySelectorAll('textarea').forEach((textarea) => {
+                ClassicEditor.create(textarea).catch((error) => {
+                  console.error(error);
+                });
+              });
+              document
+                .getElementById('wr_form')
+                .addEventListener('submit', (event) => {
+                  editors.forEach((editor, index) => {
+                    document.querySelectorAll('textarea')[index].value =
+                      editor.getData();
+                  });
+                });
+            }
+          );
           break;
         case 'artistprofile':
           loadCSS('style/artistprofile.css');
