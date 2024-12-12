@@ -39,3 +39,17 @@ CREATE TABLE events (
     cover_image VARCHAR(255),
     FOREIGN KEY (performer_id) REFERENCES artists(artist_id)
 );
+
+CREATE TABLE performers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15) NOT NULL,
+    age INT NOT NULL,
+    area_of_talent VARCHAR(255) NOT NULL,
+    professional_or_amateur VARCHAR(50) NOT NULL,
+    experience TEXT,
+    about TEXT,
+    image VARCHAR(255) NOT NULL
+);
