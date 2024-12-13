@@ -16,6 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $about = $_POST['about'];
 
     $image = $_FILES['image'];
+    if ($image['size'] > 1048576) { // 1 MB = 1048576 bytes
+        echo "Image size must be less than 1 MB.";
+        exit;
+    }
     $targetDir = "images/uploads/";
     $imagePath = $targetDir . basename($image['name']);
     move_uploaded_file($image['tmp_name'], $imagePath);
