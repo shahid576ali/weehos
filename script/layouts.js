@@ -105,6 +105,25 @@ function loadPage(page) {
         case 'artistprofile':
           loadCSS('style/artistprofile.css');
           loadScript('script/artistprofile.js');
+          loadScript('script/artistprofileupdate.js');
+          loadScript(
+            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
+            () => {
+              document.querySelectorAll('textarea').forEach((textarea) => {
+                ClassicEditor.create(textarea).catch((error) => {
+                  console.error(error);
+                });
+              });
+              document
+                .getElementById('wr_form')
+                .addEventListener('submit', (event) => {
+                  editors.forEach((editor, index) => {
+                    document.querySelectorAll('textarea')[index].value =
+                      editor.getData();
+                  });
+                });
+            }
+          );
           break;
         case 'eventdetails':
           loadCSS('style/eventdetails.css');

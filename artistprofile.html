@@ -4,6 +4,9 @@
             <img class="cover-img" src="images/artists/familygettogether.jpg" alt="Cover Image">
             <div class="profile-picture">
                 <img src="images/artists/mandeep.jpg" alt="Profile Picture" />
+                <div class="edit-icon-wrapper">
+                    <i class="fas fa-pencil-alt edit-icon" id="edit-profile-icon" title="Edit Profile"></i>
+                </div>
             </div>
         </div>
         <div class="profile-header">
@@ -79,7 +82,6 @@
             </div>
         </div>
 
-
         <div class="tab-buttons">
             <button class="tab-button active" onclick="showTab(0)">Events</button>
             <button class="tab-button" onclick="showTab(1)">Requests</button>
@@ -119,6 +121,36 @@
                 <button onclick="changePage(-1)">Prev</button>
                 <span id="page-numbers"></span>
                 <button onclick="changePage(1)">Next</button>
+            </div>
+        </div>
+
+        <div id="edit-profile-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h1>Edit Profile</h1>
+                <form id="edit-profile-form">
+                    <div>
+                        <label for="edit-name">Name:</label>
+                        <input type="text" id="edit-name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label for="edit-email">Email:</label>
+                        <input type="email" id="edit-email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label for="edit-location">Location:</label>
+                        <input type="text" id="edit-location" name="location" placeholder="Enter your location">
+                    </div>
+                    <div>
+                        <label for="edit-bio">Bio:</label>
+                        <textarea id="edit-bio" name="bio" placeholder=""></textarea>
+                    </div>
+                    <div>
+                        <label for="edit-image">Profile Picture:</label>
+                        <input type="file" id="edit-image" name="image">
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
             </div>
         </div>
     </div>
