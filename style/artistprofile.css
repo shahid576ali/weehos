@@ -286,7 +286,8 @@ thead th {
 }
 
 .modal-content input,
-.modal-content select {
+.modal-content select,
+.modal-content textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -299,7 +300,8 @@ thead th {
 }
 
 .modal-content input:focus,
-.modal-content select:focus {
+.modal-content select:focus,
+.modal-content textarea:focus {
     border-color: #ad2020;
     outline: none;
 }
