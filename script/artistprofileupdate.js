@@ -2,17 +2,17 @@ $(document).ready(function () {
     const modal = $("#edit-profile-modal");
     const closeBtn = $(".close-btn");
 
-    // Open Modal on Clicking the Edit Icon
     $("#edit-profile-icon").on("click", function () {
         modal.show();
-        // Pre-fill current data
-        $("#edit-name").val("Mandeep Singh"); // Replace with dynamic data
+        $("#edit-name").val("Mandeep Singh");
         $("#edit-email").val("mandeep@example.com");
         $("#edit-location").val("New Delhi, India");
-        $("#edit-bio").val("💕🎶Improve yourself daily🎶💕");
+        const bioContent = "💕🎶Improve yourself daily🎶💕";
+        const bioTextarea = $("#edit-bio");
+        bioTextarea.val(bioContent);
+        bioTextarea.trigger("input");
     });
 
-    // Close Modal
     closeBtn.on("click", function () {
         modal.hide();
     });
@@ -23,14 +23,12 @@ $(document).ready(function () {
         }
     });
 
-    // Handle Form Submission
     $("#edit-profile-form").on("submit", function (e) {
         e.preventDefault();
         const formData = new FormData(this);
-
         $.ajax({
             type: "POST",
-            url: "php/updateArtistProfile.php", // PHP script to handle updates
+            url: "php/artistprofileupdate.php",
             data: formData,
             contentType: false,
             processData: false,
@@ -38,7 +36,7 @@ $(document).ready(function () {
                 console.log("Update Response:", response);
                 if (response.trim() === "ok") {
                     alert("Profile updated successfully!");
-                    location.reload(); // Refresh page to show updated data
+                    location.reload();
                 } else {
                     alert(response.trim());
                 }
