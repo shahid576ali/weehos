@@ -1,3 +1,7 @@
+body {
+    padding-top: 0px;
+}
+
 .content .loginbody {
     display: flex;
     justify-content: center;
