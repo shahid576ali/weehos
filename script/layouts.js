@@ -52,7 +52,12 @@ function loadPage(page) {
           break;
         case 'createyourevent':
           loadCSS('style/createyourevent.css');
-          loadScript('script/preview.js');
+          loadCSS('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css');
+          loadScript('https://code.jquery.com/jquery-3.5.1.min.js');
+          loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+          loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js');
+          loadScript('script/createyourevent.js');
           loadScript(
             'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
             () => {
