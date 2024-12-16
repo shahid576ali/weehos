@@ -46,11 +46,17 @@
           <div style="width: 100%">
             <label for="posterImage">Poster Image:</label>
             <input type="file" name="posterImage" class="image" id="posterImage" />
+            <small id="posterImageError" style="color: white; display: none;">
+              Image size must be less than 1 MB.
+            </small>
           </div>
           <div style="width: 100%">
             <label for="coverImage">Cover Image:</label>
             <input type="file" name="coverImage" class="image" id="coverImage" />
-          </div>
+            <small id="coverImageError" style="color: white; display: none;">
+              Image size must be less than 1 MB.
+            </small>
+          </div>          
           <input type="hidden" id="posterImageData" name="posterImageData" />
           <input type="hidden" id="coverImageData" name="coverImageData" />
           <button type="submit">Send Message</button>
