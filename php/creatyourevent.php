@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $performer = $_POST['performer'] ?? null;
     $date = $_POST['date'] ?? null;
     $time = $_POST['time'] ?? null;
-    $posterImageData = $_POST['posterImageData'] ?? null;
+    $posterImageData = $_POST['posterImage'] ?? null;
     $coverImageData = $_POST['coverImageData'] ?? null;
 
     if (!$event_name || !$description || !$event_type || !$performer || !$date || !$time) {
