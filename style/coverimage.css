@@ -1,9 +1,10 @@
 .content {
-    max-width: 1200px;
-    background-color: #fff;
+    max-width: 800px;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    box-shadow: 0 5px 10px 0px rgb(194, 194, 194);
 }
 
 h2 {
@@ -108,22 +109,6 @@ tr:hover {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.main-header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.main-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .logo img {

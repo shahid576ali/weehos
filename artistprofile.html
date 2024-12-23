@@ -87,40 +87,42 @@
             <button class="tab-button" onclick="showTab(1)">Requests</button>
         </div>
 
-        <div class="table-controls">
-            <div>
-                <label for="rows-per-page">Show </label>
-                <select id="rows-per-page" onchange="changeRowsPerPage()">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                </select>
-                <label for="rows-per-page">entries</label>
+        <div class="table-container">
+            <div class="table-controls">
+                <div>
+                    <label for="rows-per-page">Show </label>
+                    <select id="rows-per-page" onchange="changeRowsPerPage()">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                    <label for="rows-per-page">entries</label>
+                </div>
+                <div>
+                    <input type="text" id="search-input" placeholder="Search..." onkeyup="filterTable()" />
+                </div>
             </div>
-            <div>
-                <input type="text" id="search-input" placeholder="Search..." onkeyup="filterTable()" />
-            </div>
-        </div>
 
-        <table id="data-table">
-            <thead>
-                <tr>
-                    <th onclick="sortTable(0)">Event Name <i class="fas fa-sort sort-icon"></i></th>
-                    <th onclick="sortTable(1)">Type <i class="fas fa-sort sort-icon"></i></th>
-                    <th onclick="sortTable(2)">Date <i class="fas fa-sort sort-icon"></i></th>
-                    <th onclick="sortTable(3)">Venue <i class="fas fa-sort sort-icon"></i></th>
-                    <th onclick="sortTable(4)">Status <i class="fas fa-sort sort-icon"></i></th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Event Name <i class="fas fa-sort sort-icon"></i></th>
+                        <th onclick="sortTable(1)">Type <i class="fas fa-sort sort-icon"></i></th>
+                        <th onclick="sortTable(2)">Date <i class="fas fa-sort sort-icon"></i></th>
+                        <th onclick="sortTable(3)">Venue <i class="fas fa-sort sort-icon"></i></th>
+                        <th onclick="sortTable(4)">Status <i class="fas fa-sort sort-icon"></i></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
 
-        <div class="pagination">
-            <div id="page-info"></div>
-            <div>
-                <button onclick="changePage(-1)">Prev</button>
-                <span id="page-numbers"></span>
-                <button onclick="changePage(1)">Next</button>
+            <div class="pagination">
+                <div id="page-info"></div>
+                <div>
+                    <button onclick="changePage(-1)">Prev</button>
+                    <span id="page-numbers"></span>
+                    <button onclick="changePage(1)">Next</button>
+                </div>
             </div>
         </div>
 

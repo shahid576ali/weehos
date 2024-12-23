@@ -168,6 +168,12 @@ p strong {
     color: white;
 }
 
+.table-container {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 10px 0px rgb(194, 194, 194);
+}
+
 .table-controls {
     display: flex;
     justify-content: space-between;
@@ -187,7 +193,7 @@ td {
     text-align: left;
 }
 
-thead th {
+thead tr {
     background: linear-gradient(to right, #ff6400, #ff9600);
     color: white;
 }
