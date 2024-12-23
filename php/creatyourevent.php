@@ -1,61 +1,76 @@
 <?php
-include 'db.php';
+include("db.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $event_name = $_POST['event_name'] ?? null;
-    $description = $_POST['description'] ?? null;
-    $event_type = $_POST['event_type'] ?? null;
-    $performer = $_POST['performer'] ?? null;
-    $date = $_POST['date'] ?? null;
-    $time = $_POST['time'] ?? null;
-    $posterImageData = $_POST['posterImageData'] ?? null;
-    $coverImageData = $_POST['coverImageData'] ?? null;
-
-    if (!$event_name || !$description || !$event_type || !$performer || !$date || !$time) {
-        echo json_encode(['success' => false, 'message' => 'All fields are required.']);
-        exit;
-    }
-
-    // Function to generate the next image name
-    function generateImageName($conn, $column, $prefix) {
-        $sql = "SELECT $column FROM events ORDER BY event_id DESC LIMIT 1";
-        $result = mysqli_query($conn, $sql);
-        $lastImageName = $result && mysqli_num_rows($result) > 0 ? mysqli_fetch_assoc($result)[$column] : null;
-
-        if ($lastImageName) {
-            // Extract numeric part and increment
-            preg_match('/\d+/', $lastImageName, $matches);
-            $number = $matches ? (int)$matches[0] + 1 : 1;
-        } else {
-            $number = 1; // Start with 1 if no images exist
-        }
-
-        return $prefix . str_pad($number, 6, '0', STR_PAD_LEFT);
-    }
-
-    $posterImagePath = null;
-    $coverImagePath = null;
-
-    if ($posterImageData) {
-        $posterImageName = generateImageName($conn, 'poster_image', 'pimg-');
-        $posterImagePath = "../images/poster/" . $posterImageName . ".png";
-        file_put_contents($posterImagePath, base64_decode($posterImageData));
-    }
-
-    if ($coverImageData) {
-        $coverImageName = generateImageName($conn, 'cover_image', 'cimg-');
-        $coverImagePath = "../images/cover/" . $coverImageName . ".png";
-        file_put_contents($coverImagePath, base64_decode($coverImageData));
-    }
-
-    $sql = "
-        INSERT INTO events (`event_name`, `description`, `event_type`, `performer_id`, `event_date`, `event_time`, `poster_image`, `cover_image`)
-        VALUES ('$event_name', '$description', '$event_type', '$performer', '$date', '$time', '$posterImageName', '$coverImageName')
-    ";
-    if (mysqli_query($conn, $sql)) {
-        echo json_encode(['success' => true, 'message' => 'Event created successfully.']);
+// Function to get the last filename for a specific image type (poster or cover)
+function getLastImageFilename($conn, $prefix) {
+    $column = $prefix === 'posterImage' ? 'poster_image' : 'cover_image';
+    $sql = "SELECT $column FROM `events` ORDER BY $column DESC LIMIT 1";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return $row[$column];
     } else {
-        echo json_encode(['success' => false, 'message' => 'Database insertion failed.']);
+        return $prefix . "-0000000.jpg"; // Default if no image exists
     }
 }
+
+// Function to increment the filename
+function incrementFilename($filename, $prefix) {
+    $num = intval(substr($filename, strlen($prefix) + 1, 7)) + 1;
+    return $prefix . "-" . sprintf("%07d", $num) . ".jpg";
+}
+
+// Function to save image and return the new filename
+function saveImage($imageFile, $prefix, $conn) {
+    $targetDir = $prefix === 'posterImage' ? "event_image/poster/" : "event_image/cover/";
+    $lastFilename = getLastImageFilename($conn, $prefix);
+    $newFilename = incrementFilename($lastFilename, $prefix);
+    $newImagePath = $targetDir . $newFilename;
+
+    if (isset($imageFile) && $imageFile["error"] === UPLOAD_ERR_OK) {
+        if (move_uploaded_file($imageFile["tmp_name"], $newImagePath)) {
+            return $newFilename;
+        } else {
+            throw new Exception("Error uploading the " . $prefix . " image.");
+        }
+    } else {
+        throw new Exception("Invalid or missing " . $prefix . " image.");
+    }
+}
+
+// Function to save event details
+function saveEventDetails($conn, $posterFilename, $coverFilename) {
+    $name = $_POST["event_name"];
+    $description = $_POST["description"];
+    $type = $_POST["event_type"];
+    $performer = $_POST["performer"];
+    $date = $_POST["date"];
+    $time = $_POST["time"];
+
+    $sql = "INSERT INTO `events`(`event_name`, `description`, `event_type`, `performer_id`, `event_date`, `event_time`, `poster_image`, `cover_image`) VALUES ('$name','$description','$type','$performer','$date','$time','$posterFilename','$coverFilename')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Event successfully saved.";
+    } else {
+        throw new Exception("Database error: " . $conn->error);
+    }
+}
+
+// Check if form submitted with file
+if (isset($_POST["event_name"])) {
+    $conn->begin_transaction();
+    try {
+        $posterFilename = saveImage($_FILES["posterImageData"], "posterImage", $conn);
+        $coverFilename = saveImage($_FILES["coverImage"], "coverImage", $conn);
+        saveEventDetails($conn, $posterFilename, $coverFilename);
+        $conn->commit();
+    } catch (Exception $e) {
+        $conn->rollback();
+        echo "Transaction failed: " . $e->getMessage();
+    }
+} else {
+    echo "Required fields or files are missing.";
+}
+
+$conn->close();
 ?>
