@@ -198,6 +198,27 @@ thead tr {
     color: white;
 }
 
+.action-button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.accept {
+    background-color: #25d837;
+    color: black;
+}
+
+.reject {
+    background-color: #d82525;
+    color: white;
+}
+
+.postpone {
+    background-color: #d8b725;
+    color: black;
+}
+
 .pagination {
     display: flex;
     justify-content: space-between;
