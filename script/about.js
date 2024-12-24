@@ -62,4 +62,19 @@ ScrollReveal().reveal(".room__card", {
   interval: 500,
 });
 
+// Dynamic text truncation for room cards
+document.addEventListener('DOMContentLoaded', () => {
+  const paragraphs = document.querySelectorAll('.room__card__details p');
+
+  paragraphs.forEach(p => {
+    p.style.display = '-webkit-box';
+    p.style.webkitLineClamp = '3';
+    p.style.webkitBoxOrient = 'vertical';
+    p.style.overflow = 'hidden';
+    p.style.textOverflow = 'ellipsis';
+    p.style.maxHeight = '100px';
+    p.style.lineHeight = '20px';
+  });
+});
+
 

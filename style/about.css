@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #e82574;
-  --primary-color-dark: #bc1c5c;
+  --primary-color: #ff6400;
+  --primary-color-dark: #a20d0d;
   --text-dark: #0c0a09;
   --text-light: #78716c;
   --white: #ffffff;
@@ -258,7 +258,7 @@ body {
 }
 
 .room__card__icons span:nth-child(1) {
-  color: #f472b6;
+  color: var(--primary-color-dark);
 }
 
 .room__card__icons span:nth-child(2) {
@@ -297,7 +297,15 @@ body {
   color: var(--text-dark);
 }
 
-
+.room__card__details p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 100px;
+  line-height: 20px;
+}
 
 .banner__content {
   padding: 2rem;
