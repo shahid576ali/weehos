@@ -1,3 +1,7 @@
+body {
+    padding-top: 0px;
+}
+
 .content {
     max-width: 800px;
     background-color: #ffffff;
@@ -195,6 +199,19 @@ tr:hover {
 
 #cropper-container img {
     max-width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.preview {
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+    border: 1px solid red;
 }
 
 @media (min-width: 768px) {
