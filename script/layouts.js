@@ -58,77 +58,31 @@ function loadPage(page) {
           loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
           loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js');
           loadScript('script/createyourevent.js');
-          loadScript(
-            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
-            () => {
-              document.querySelectorAll('textarea').forEach((textarea) => {
-                ClassicEditor.create(textarea).catch((error) => {
-                  console.error(error);
-                });
-              });
-              document
-                .getElementById('wr_form')
-                .addEventListener('submit', (event) => {
-                  editors.forEach((editor, index) => {
-                    document.querySelectorAll('textarea')[index].value =
-                      editor.getData();
-                  });
-                });
-            }
-          );
+          loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js');
+          loadScript('script/texteditor.js');
           break;
         case 'coverimage':
           loadCSS('style/coverimage.css');
-          loadScript(
-            'https://cdnjs.cloudflare.com/ajax/libs/cropperscript/1.5.12/cropper.min.js'
-          );
+          loadCSS('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+          loadCSS('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css');
+          loadScript('https://code.jquery.com/jquery-3.5.1.min.js');
+          loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+          loadScript('https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js');
           loadScript('script/coverimage.js');
           break;
         case 'addperformer':
           loadCSS('style/addperformer.css');
           loadScript('https://code.jquery.com/jquery-3.6.0.min.js');
           loadScript('script/addperformer.js');
-          loadScript(
-            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
-            () => {
-              document.querySelectorAll('textarea').forEach((textarea) => {
-                ClassicEditor.create(textarea).catch((error) => {
-                  console.error(error);
-                });
-              });
-              document
-                .getElementById('wr_form')
-                .addEventListener('submit', (event) => {
-                  editors.forEach((editor, index) => {
-                    document.querySelectorAll('textarea')[index].value =
-                      editor.getData();
-                  });
-                });
-            }
-          );
+          loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js');
+          loadScript('script/texteditor.js');
           break;
         case 'artistprofile':
           loadCSS('style/artistprofile.css');
           loadScript('script/artistprofile.js');
           loadScript('script/artistprofileupdate.js');
-          loadScript(
-            'https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js',
-            () => {
-              document.querySelectorAll('textarea').forEach((textarea) => {
-                ClassicEditor.create(textarea).catch((error) => {
-                  console.error(error);
-                });
-              });
-              document
-                .getElementById('wr_form')
-                .addEventListener('submit', (event) => {
-                  editors.forEach((editor, index) => {
-                    document.querySelectorAll('textarea')[index].value =
-                      editor.getData();
-                  });
-                });
-            }
-          );
+          loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js');
+          loadScript('script/texteditor.js');
           break;
         case 'eventdetails':
           loadCSS('style/eventdetails.css');
