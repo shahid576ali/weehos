@@ -4,12 +4,8 @@
     <h2>Add New Image</h2>
     <form id="image-form">
       <input type="file" id="image-upload" accept="image/*" required />
-      <input
-        type="text"
-        id="image-alt"
-        placeholder="Image description"
-        required
-      />
+      <p id="size-warning" style="color: red; display: none;">Image size must be less than 1MB</p>
+      <input type="text" id="image-alt" placeholder="Image description" required />
       <div id="cropper-container" style="display: none">
         <img id="cropper-image" />
       </div>
