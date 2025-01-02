@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fileInput.addEventListener('change', function (e) {
         const file = e.target.files[0];
+        if (file.size > 1 * 1024 * 1024) {
+            alert('File size exceeds 1MB limit. Please choose a smaller file.');
+            fileInput.value = '';
+            return;
+        }
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
