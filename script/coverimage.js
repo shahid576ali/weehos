@@ -1,5 +1,5 @@
-const myAspectRatio = 10 / 3;
-let images = JSON.parse(localStorage.getItem('images')) || [];
+const myAspectRatio = 16 / 3;
+let images = JSON.parse(localStorage.getItem('images/cover')) || [];
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('image-form');
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const cropButton = document.getElementById('crop-button');
     const fileInput = document.getElementById('image-upload');
     const imageAltInput = document.getElementById('image-alt');
-    const IMAGE_FOLDER_PATH = 'images/';
 
     let cropper;
 
@@ -59,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 height: 528
             }).toDataURL('image/jpeg');
             addImageToList(croppedImage);
+            submitForm();
         }
     });
 
@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return true;
     }
-    
+
     function addImageToList(imageSrc) {
         const alt = imageAltInput.value.trim();
         if (imageSrc && alt) {
-            const imagePath = `${IMAGE_FOLDER_PATH}${Date.now()}_image.jpg`; // Create a unique filename
+            const imagePath = `images/cover/HomeCover_${Math.floor(Date.now() / 1000)}.jpg`;
             images.push({ src: imagePath, alt, show: true });
             renderTable();
             form.reset();
@@ -82,7 +82,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function saveImages() {
-        localStorage.setItem('images', JSON.stringify(images));
+        localStorage.setItem('images/cover', JSON.stringify(images));
+    }
+
+    function submitForm() {
+        const formData = new FormData(form);
+        fetch('coverimage.php', {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json()).then(data => {
+            if (data.status === 'success') {
+                console.log('Image uploaded successfully');
+                console.log(data);
+                const latestImage = images[images.length - 1];
+                latestImage.src = data.src;
+                saveImages();
+                renderTable();
+            } else {
+                console.error('Upload failed: ' + data.message);
+            }
+        }).catch(error => console.error('Error:', error));
     }
 
     function renderTable() {
@@ -168,7 +187,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             height: 528
                         });
                         const croppedImage = croppedCanvas.toDataURL('image/jpeg');
-                        images[index].src = croppedImage;
+                        const imagePath = `images/cover/HomeCover_${Math.floor(Date.now() / 1000)}.jpg`;
+                        images[index].src = imagePath;
                         saveImages();
                         renderTable();
                         cropperContainer.style.display = 'none';
