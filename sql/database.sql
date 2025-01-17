@@ -5,26 +5,27 @@ USE weeho;
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    user_type ENUM('user', 'artist', 'admin') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE artists (
     artist_id INT AUTO_INCREMENT PRIMARY KEY,
-    artistName VARCHAR(50) NOT NULL,
+    user_id INT NOT NULL,
     genre VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    bio TEXT
+    bio TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE admins (
     admin_id INT AUTO_INCREMENT PRIMARY KEY,
-    fullName VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
+    user_id INT NOT NULL,
     organization VARCHAR(100),
-    adminKey VARCHAR(50) NOT NULL UNIQUE
+    adminKey VARCHAR(50) NOT NULL UNIQUE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE events (
