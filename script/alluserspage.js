@@ -21,21 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredEntries = [];
     let showingUsersWithoutPhoto = false;
 
-    let entries = [
-        { photo: "img/mandeep.jpg", name: "Mandeep Singh", position: "Performer", email: "mandeep@example.com", phone: "(+91) 4567890123", department: "Entertainment" },
-        { photo: "img/user.png", name: "User", position: "User", email: "user@example.com", phone: "(+91) 6543210987", department: "Regular" },
-        { photo: "img/naviin.jpg", name: "Naviin", position: "Performer", email: "naviin@example.com", phone: "(+91) 1234567890", department: "Entertainment" },
-        { photo: "img/rupali.jpg", name: "Rupali", position: "Performer", email: "rupali@example.com", phone: "(+91) 9876543210", department: "Entertainment" },
-        { photo: "https://randomuser.me/api/portraits/men/5.jpg", name: "William Johnson", position: "Manager", email: "william.johnson@example.com", phone: "(333) 555-7890", department: "Management" },
-        { photo: "https://randomuser.me/api/portraits/women/6.jpg", name: "Sophia Martinez", position: "Performer", email: "sophia.martinez@example.com", phone: "(222) 444-1234", department: "Entertainment" },
-        { photo: "https://randomuser.me/api/portraits/men/7.jpg", name: "James Wilson", position: "User", email: "james.wilson@example.com", phone: "(111) 666-7890", department: "Marketing" },
-        { photo: "https://randomuser.me/api/portraits/women/8.jpg", name: "Olivia Lee", position: "Social Media", email: "olivia.lee@example.com", phone: "(000) 999-5555", department: "Promotion" },
-    ];
+    let entries = [];
 
-    const initializeEntries = () => {
-        entries.forEach((entry, index) => {
-            entry.userId = `USER${String(index + 1).padStart(4, '0')}`;
-        });
+    const fetchData = async () => {
+        try {
+            const response = await fetch('all_users.php');
+            const data = await response.json();
+    
+            entries = data.map(user => ({
+                photo: getPhotoPath(user),
+                userId: user.user_id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone,
+                user_type: user.user_type,
+                organization_genre: user.organization_genre
+            }));
+    
+            filteredEntries = entries;
+            renderTable();
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+        }
+    };
+    
+    const getPhotoPath = (user) => {
+        const folder = 'images/allusers/';
+        const photoName = user.photo
+            ? `${user.id}.png`
+            : 'user.png';
+        return folder + photoName;
     };
 
     const renderTable = () => {
@@ -49,13 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         displayedEntries.forEach((entry, index) => {
             const row = document.createElement('tr');
-
             const photoCell = document.createElement('td');
             const photo = document.createElement('img');
             if (entry.photo) {
                 photo.src = entry.photo;
             } else {
-                photo.src = "img/user.png";
+                photo.src = "images/allusers/user.png";
                 notifyUser(entry);
             }
             photo.alt = entry.name;
@@ -68,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             userIdCell.textContent = entry.userId;
             row.appendChild(userIdCell);
 
-            ['name', 'position', 'email', 'phone', 'department'].forEach(key => {
+            ['name', 'email', 'phone','user_type', 'organization_genre'].forEach(key => {
                 const cell = document.createElement('td');
                 cell.textContent = entry[key];
                 row.appendChild(cell);
@@ -372,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function getKeyFromIndex(index) {
-        const keys = ['photo', 'userId', 'name', 'position', 'email', 'phone', 'department'];
+        const keys = ['photo', 'userId', 'name', 'email', 'phone', 'user_type', 'organization_genre'];
         return keys[index];
     }
 
@@ -393,5 +407,5 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutIcon.addEventListener('click', toggleUsersWithoutPhoto);
     initializeEntries();
     filterEntries();
-    renderTable();
+    fetchData();
 });
