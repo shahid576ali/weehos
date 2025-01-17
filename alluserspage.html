@@ -34,10 +34,10 @@
                                                     <th>Photo <i class="fas fa-sort"></i></th>
                                                     <th>User ID <i class="fas fa-sort"></i></th>
                                                     <th>Name <i class="fas fa-sort"></i></th>
-                                                    <th>Position <i class="fas fa-sort"></i></th>
                                                     <th>Email <i class="fas fa-sort"></i></th>
                                                     <th>Phone <i class="fas fa-sort"></i></th>
-                                                    <th>Department <i class="fas fa-sort"></i></th>
+                                                    <th>User Type <i class="fas fa-sort"></i></th>
+                                                    <th>Organization/Genre <i class="fas fa-sort"></i></th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -67,10 +67,9 @@
             <h2>Change Position</h2>
             <div class="pos">
                 <select id="positionSelect">
-                    <option value="Performer">Performer</option>
-                    <option value="User">User</option>
-                    <option value="Manager">Manager</option>
-                    <option value="Social Media">Social Media</option>
+                    <option value="artist">Artist</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
                 </select>
                 <button id="savePosition">Save</button>
             </div>
@@ -107,18 +106,17 @@
                     <h3>Select Position:</h3>
                     <select id="roleSelect">
                         <option value="">All Positions</option>
-                        <option value="Performer">Performer</option>
-                        <option value="User">User</option>
-                        <option value="Manager">Manager</option>
-                        <option value="Social Media">Social Media</option>
+                        <option value="artist">Artist</option>
+                        <option value="user">User</option>
+                        <option value="admin">admin</option>
                     </select>
-                    <h3>Select Performers:</h3>
-                    <div class="performers-selection">
-                        <select id="performersSelect" multiple>
+                    <h3>Select Users:</h3>
+                    <div class="Users-selection">
+                        <select id="UsersSelect" multiple>
 
                         </select>
                     </div>
-                    <button id="sendInvitation">Send Invitation to Selected Performers</button>
+                    <button id="sendInvitation">Send Invitation to Selected Users</button>
                 </div>
             </div>
         </div>
