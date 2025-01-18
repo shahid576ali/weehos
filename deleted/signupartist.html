@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="container">
+        <div class="form-container">
+            <h1>Artist Sign Up</h1>
+            <p>
+                Already have an account?
+                <a href="javascript:void(0);" onclick="loadPage('signinartist')">Sign In</a>
+            </p>
+            <form onsubmit="handleSignup(event)">
+                <label for="artistName">Artist Name:</label>
+                <input type="text" id="artistName" name="artistName" placeholder="Artist Name" required />
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Your Genre" required />
+
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" placeholder="Email address" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself" required></textarea>
+
+                <button type="submit">Create Account →</button>
+            </form>
+            <div class="social-signup">
+                <button style="color: black">
+                    <img src="images/icon/google.ico" alt="Google icon" /> Sign up
+                    with Google
+                </button>
+                <button style="color: black">
+                    <img src="images/icon/facebook.ico" alt="Facebook icon" />
+                    Sign up with Facebook
+                </button>
+            </div>
+        </div>
+        <div class="image-container">
+            <!-- Background image handled in CSS -->
+        </div>
+    </div>
+</div>

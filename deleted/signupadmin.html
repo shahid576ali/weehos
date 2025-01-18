@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="container">
+        <div class="form-container">
+            <h1>Admin Sign Up</h1>
+            <p>
+                Already have an account?
+                <a href="javascript:void(0);" onclick="loadPage('signinadmin')">Sign In</a>
+            </p>
+            <form onsubmit="handleSignup(event)">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required />
+
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" placeholder="Email address" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+
+                <label for="organization">Organization Name:</label>
+                <input type="text" id="organization" name="organization" placeholder="Organization Name" required />
+
+                <label for="adminKey">Admin Key:</label>
+                <input type="text" id="adminKey" name="adminKey" placeholder="Enter Admin Key" required />
+
+                <button type="submit">Create Account →</button>
+            </form>
+            <div class="social-signup">
+                <button style="color: black">
+                    <img src="images/icon/google.ico" alt="Google icon" /> Sign up
+                    with Google
+                </button>
+                <button style="color: black">
+                    <img src="images/icon/facebook.ico" alt="Facebook icon" />
+                    Sign up with Facebook
+                </button>
+            </div>
+        </div>
+        <div class="image-container">
+            <!-- Background image handled in CSS -->
+        </div>
+    </div>
+</div>
