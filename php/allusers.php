@@ -11,7 +11,7 @@ try {
             user.email,
             user.phone,
             user.user_type,
-            COALESCE(admin.organization, artist.genre) AS organization_genre,
+            COALESCE(admin.organization, artist.genre, 'User') AS organization_genre,
             CASE 
                 WHEN user.photo IS NOT NULL THEN CONCAT('images/allusers/', user.photo)
                 ELSE NULL
