@@ -9,10 +9,32 @@
             <form onsubmit="handleSignup(event)">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+                <label for="phone">Phone No:</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number" required />
                 <label for="email">Email address:</label>
                 <input type="email" id="email" name="email" placeholder="Email address" required />
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Password" required />
+                <label for="user_type">User Type:</label>
+                <select id="user_type" name="user_type" onchange="toggleFields()" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="artist">Artist</option>
+                </select><br>
+
+                <div id="adminFields" class="hidden">
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization"><br>
+                    <label for="adminkey">Admin Key:</label>
+                    <input type="text" id="adminkey" name="adminkey"><br>
+                </div>
+
+                <div id="artistFields" class="hidden">
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" name="genre"><br>
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio"></textarea><br>
+                </div>
                 <button type="submit">Create Account →</button>
             </form>
             <div class="social-signup">
