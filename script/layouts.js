@@ -107,22 +107,8 @@ function loadPage(page) {
         case 'signup':
           loadCSS('style/signup.css');
           loadScript('script/signup.js');
-          break;
-        case 'signinadmin':
-          loadCSS('style/usersignin.css');
-          loadScript('script/signinadmin.js');
-          break;
-        case 'signupadmin':
-          loadCSS('style/usersignup.css');
-          loadScript('script/signupadmin.js');
-          break;
-        case 'signinartist':
-          loadCSS('style/usersignin.css');
-          loadScript('script/signinartist.js');
-          break;
-        case 'signupartist':
-          loadCSS('style/usersignup.css');
-          loadScript('script/signupartist.js');
+          loadScript('https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js');
+          loadScript('script/texteditor.js');
           break;
         default:
           break;

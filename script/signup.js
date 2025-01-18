@@ -1,5 +1,11 @@
 document.querySelector("form").addEventListener("submit", handleSignup);
 
+function toggleFields() {
+    const userType = document.getElementById("user_type").value;
+    document.getElementById("adminFields").classList.toggle("hidden", userType !== "admin");
+    document.getElementById("artistFields").classList.toggle("hidden", userType !== "artist");
+}
+
 function handleSignup(event) {
     event.preventDefault();
     const firstName = document.getElementById("firstName").value;

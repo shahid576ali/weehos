@@ -1,5 +1,10 @@
 document.querySelector("form").addEventListener("submit", handleSignin);
 
+function toggleAdminKey() {
+    const userType = document.getElementById("user_type").value;
+    document.getElementById("adminKeyField").classList.toggle("hidden", userType !== "admin");
+}
+
 function handleSignin(event) {
     event.preventDefault();
     const email = document.getElementById("email").value;
