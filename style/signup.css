@@ -36,7 +36,8 @@
     font-weight: bold;
 }
 
-.form-container input {
+.form-container input,
+.form-container select {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -45,6 +46,10 @@
     border-radius: 4px;
     font-size: 16px;
     background-color: #f9f9f9;
+}
+
+.form-container .hidden {
+    display: none;
 }
 
 .form-container button {
