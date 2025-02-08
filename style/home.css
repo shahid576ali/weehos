@@ -1,279 +1,305 @@
 .carousel-container {
-    position: relative;
-    width: 100%;
-    object-fit: cover;
-    height: 300px;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%; /* Ensure slide takes the height of the container */
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+.active {
+  display: block;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+.carousel-button.prev {
+  left: 10px;
+}
+.carousel-button.next {
+  right: 10px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.indicator {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.indicator.active {
+  background: white;
+}
+
+.title,
+.title-enter {
+  font-weight: 600;
+  padding-left: 20px;
+  color: #a20d0d;
+}
+
+.movies-list,
+.enter-list {
+  width: 100%;
+  padding: 10px 10%;
+  overflow: hidden;
+}
+
+.card-container,
+.enter-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+.card-container::-webkit-scrollbar,
+.enter-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container a h3 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.movie,
+.card {
+  flex: 0 0 auto;
+  width: 221px;
+  margin-right: 20px;
+  background: linear-gradient(to right, #ff6400, #ff9600);
+  border-radius: 10px;
+  color: white;
+}
+
+.movie {
+  box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
+}
+
+.card {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  border: none;
+}
+
+.enter-list .card {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
+}
+
+.movie,
+.enter-list .card {
+  transition: transform 0.3s ease;
+}
+
+.events .movie:hover {
+  transform: translate(2px, 2px) scale(1.05);
+}
+
+.dark {
+  background: linear-gradient(to right, #ff6400, #ff9600);
+}
+
+.dark .movie {
+  box-shadow: 5px 5px 5px rgba(219, 219, 219, 0.5);
+}
+
+.dark .card-body,
+.dark .movie {
+  color: #a20d0d;
+  background: #fff;
+  border: none;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.card-body ion-icon {
+  margin-right: 5px;
+}
+
+.movie {
+  color: white;
+}
+
+.movie h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.detail {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+a,
+.movies-list a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.dark a,
+.dark a:hover {
+  color: #a20d0d;
+}
+
+@media (max-width: 1083px) and (min-width: 1025px) {
+  .content {
+    margin-top: 20px;
   }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    height: 100%; /* Ensure slide takes the height of the container */
-  }
-  .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  }
-  
-  .active {
-    display: block;
-  }
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-  }
-  .carousel-button.prev {
-    left: 10px;
-  }
-  .carousel-button.next {
-    right: 10px;
-  }
-  .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  .indicator {
-    width: 12px;
-    height: 12px;
-    background: rgba(255,255,255,0.5);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  .indicator.active {
-    background: white;
-  }
-  
-  .title,
-  .title-enter {
-    font-weight: 600;
-    padding-left: 20px;
-    color: #A20D0D;
-  }
-  
+}
+
+@media (max-width: 992px) {
   .movies-list,
   .enter-list {
-    width: 100%;
-    padding: 10px 10%;
-    overflow: hidden;
+    padding: 10px 5%;
   }
-  
-  .card-container,
-  .enter-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px;
-  }
-  
-  .card-container::-webkit-scrollbar,
-  .enter-container::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .card-container a h3 {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-  }
-  
+}
+
+@media (max-width: 768px) {
   .movie,
   .card {
-    flex: 0 0 auto;
-    width: 221px;
-    margin-right: 20px;
-    background: linear-gradient(to right, #ff6400, #ff9600);
-    border-radius: 10px;
-    color: white;
-  }
-  
-  .movie {
-    box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
-  }
-  
-  .card {
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    border: none;
-  }
-  
-  .enter-list .card {
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.5);
-  }
-  
-  .movie,
-  .enter-list .card {
-    transition: transform 0.3s ease;
-  }
-  
-  .events .movie:hover {
-    transform: translate(2px, 2px) scale(1.05);
-  }
-  
-  .dark {
-    background: linear-gradient(to right, #ff6400, #ff9600);
-  }
-  
-  .dark .movie {
-    box-shadow: 5px 5px 5px rgba(219, 219, 219, 0.5);
-  }
-  
-  .dark .card-body,
-  .dark .movie {
-    color: #A20D0D;
-    background: #fff;
-    border: none;
-  }
-  
-  .card-img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 10px;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  .card-body {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-  }
-  
-  .card-body ion-icon {
-    margin-right: 5px;
-  }
-  
-  .movie {
-    color: white;
-  }
-  
-  .movie h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    margin-left: 10px;
-  }
-  
-  .detail {
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  
-  a,
-  .movies-list a:hover {
-    text-decoration: none;
-    color: white
-  }
-  
-  .dark a,
-  .dark a:hover {
-    color: #A20D0D;
+    width: 225px;
   }
 
-  @media (max-width: 1083px) and (min-width: 1025px) {
-    .content {
-      margin-top: 20px;
-    }
+  .movie {
+    height: 400px;
   }
-  
-  @media (max-width: 992px) {
-  
-    .movies-list,
-    .enter-list {
-      padding: 10px 5%;
-    }
+
+  .card-img {
+    height: 300px;
   }
-  
-  @media (max-width: 768px) {
-  
-    .movie,
-    .card {
-      width: 225px;
-    }
-  
-    .movie {
-      height: 400px;
-    }
-  
-    .card-img {
-      height: 300px;
-    }
-  
-    .card-body {
-      font-size: 15px;
-    }
-  
-    .movie h3 {
-      font-size: 18px;
-    }
-  
-    .detail {
-      font-size: 15px;
-    }
+
+  .card-body {
+    font-size: 15px;
   }
-  
-  @media (max-width: 576px) {
-  
-    .movie,
-    .card {
-      width: 225px;
-    }
-  
-    .movie {
-      height: 400px;
-    }
-  
-    .card-img {
-      height: 300px;
-    }
-  
-    .card-body {
-      font-size: 15px;
-    }
-  
-    .movie h3 {
-      font-size: 18px;
-    }
+
+  .movie h3 {
+    font-size: 18px;
   }
-  
-  @media (max-width: 480px) {
-  
-    .movie,
-    .card {
-      width: 200px;
-    }
-  
-    .movie {
-      height: 350px;
-    }
-  
-    .card-img {
-      height: 250px;
-    }
-  
-    .card-body {
-      padding: 5px;
-    }
-  
-    .movie h3 {
-      font-size: 18px;
-    }
-  
-    .detail {
-      font-size: 15px;
-    }
+
+  .detail {
+    font-size: 15px;
   }
+}
+
+@media (max-width: 576px) {
+  .movie,
+  .card {
+    width: 225px;
+  }
+
+  .movie {
+    height: 400px;
+  }
+
+  .card-img {
+    height: 300px;
+  }
+
+  .card-body {
+    font-size: 15px;
+  }
+
+  .movie h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie,
+  .card {
+    width: 200px;
+  }
+
+  .movie {
+    height: 350px;
+  }
+
+  .card-img {
+    height: 250px;
+  }
+
+  .card-body {
+    padding: 5px;
+  }
+
+  .movie h3 {
+    font-size: 18px;
+  }
+
+  .detail {
+    font-size: 15px;
+  }
+}
+
+.enter-list .card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+}
+
+.enter-list .card {
+  flex: 0 0 auto;
+  width: 221px;
+  margin-right: 20px;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  border-radius: 10px;
+  color: black;
+  text-align: justify;
+  border-style: solid;
+  border-color: #ff9600;
+}
+
+.feed_profile {
+  display: flex;
+  padding:10px 10px 4px 10px;
+}
+.feed_profile p{
+padding-left: 8px;
+}
+.feed_profile_img {
+  height: 30px;
+  width: 30px;
+}
